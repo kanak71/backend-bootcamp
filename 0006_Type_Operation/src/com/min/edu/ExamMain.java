@@ -5,6 +5,8 @@ public class ExamMain {
 		
 		Exam ex = new Exam();
 		ex.charnumTointNum();
+		ex.charnumTointNum2();
+		ex.charToIntToChar();
 	}
 
 }
