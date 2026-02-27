@@ -12,6 +12,8 @@ public class Prac {
 			System.out.println();
 		}
 		
+		
+		
 		System.out.println();
 		System.out.println("2번문제");
 		
@@ -21,6 +23,8 @@ public class Prac {
 			}
 			System.out.println();
 		}
+		
+		
 		
 		System.out.println();
 		System.out.println("3번문제");
@@ -71,13 +75,6 @@ public class Prac {
 			}
 			System.out.println();
 		}
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 
