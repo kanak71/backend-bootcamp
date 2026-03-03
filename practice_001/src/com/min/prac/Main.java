@@ -15,12 +15,14 @@ public class Main {
 		int sum = dv.DivisorSum(n);
 		System.out.println("1번 문제 : " + sum);
 		
+		
 		//2번문제
 		if(n == dv.DivisorSum(n)) {
 			System.out.println("완전수입니다");
 		} else {
 			System.out.println("완전수가 아닙니다");
 		}
+		
 		
 		//3번문제
 		int count = 0;
