@@ -32,9 +32,21 @@ public class CalendarMain {
 //		int days= cal.calDays(2026, 3);
 //		System.out.println(days);
 		
-		//네번째 테스트 2026년 3월 4일 까지의 일수
-		int days = cal.calDays(2026, 3, 4);
-		System.out.println(days);
+//		//네번째 테스트 2026년 3월 4일 까지의 일수
+//		int days = cal.calDays(2027, 3, 4);	-> 값이 안맞는것같음 확인 ㅇㅇ
+//		System.out.println(days);
+		
+//		//다섯번째 테스트 4년 2월, 5년 2월
+//		int daysTest01 = cal.getDayWeek(4, 2);
+//		int daysTest02 = cal.getDayWeek(5, 2);
+//		System.out.println(daysTest01);
+//		System.out.println(daysTest02);
+		
+//		//여섯번째 테스트 1월:31, 3월 : 29 or 28
+//		int beforeDays = cal.beforeDays(2026, 1);
+//		System.out.println("이전 월 최대일수" + beforeDays);
+//		
+		cal.print_calendar(2026, 1);
 	}
 
 }

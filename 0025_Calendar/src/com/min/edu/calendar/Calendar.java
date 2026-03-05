@@ -74,4 +74,75 @@ public class Calendar {
 		int days = calDays(year, month);
 		return days += day;
 	}
+	
+	//TODO 005 입력하는 월에 최대일수 LEAF[] PLAIN[]에서 가져오면 된다. -1로 계산해야한다
+	
+	/**
+	 * 입력받은 월의 최대 일수를 구함
+	 * @param year 해당년도
+	 * @param month 해당월
+	 * @return 윤년/평년을 판단하여 LEAF[] or PLAIN[]에서 월 -1을 통해서 index의 값을 가져온다
+	 */
+	public int getDayMonth(int year, int month) {
+		int days = 0;
+		if(isCheckLeap(year)) { //윤년(true)/평년 판단
+			days = LEAP[month-1];
+		} else {
+			days = PLAIN[month-1];
+		}
+		return days;
+		
+	}
+	
+	//TODO 007 이전달력의 최대일수를 구하기 위한 메소드
+	//			1월의 이전달력은 12월이 되어야 하기 때문에
+	public int beforeDays(int year, int month) {
+		int beforeDays = 0;
+		
+		if(month == 1) {
+			beforeDays = 31;
+		} else {
+			beforeDays = getDayMonth(year, month -1);
+		}
+		
+		return beforeDays;
+	}
+	
+	//TODO 006 출력
+	public void print_calendar(int year, int month) {
+		System.out.printf("\t\t%d년도\t%d월\n", year, month);
+		System.out.printf("일\t월\t화\t수\t목\t금\t토\n");
+		//원하는 년도월의 첫번째 요일을 알고 있어야 출력
+		int dayOfWeek = calDays(year, month, 1)%7;
+		int dayOfMonth = getDayMonth(year, month);
+		
+		int beforeDayOfMonth = beforeDays(year,month);
+		
+//		//1시작 까지의 공백을 출력
+//		for (int i = 0; i < dayOfWeek; i++) {
+//			System.out.printf("%s\t","-");
+//		}
+		
+		for (int i= beforeDayOfMonth - dayOfWeek+1; i <= beforeDayOfMonth; i++) {
+			System.out.printf("%d\t",i);
+		}
+		
+		for (int i = 1; i <= dayOfMonth; i++) {
+			System.out.printf("%d\t",i);
+			if((dayOfWeek+i)%7==0) {
+				System.out.println();
+			}
+		}
+		
+		//다음달의 1일부터 나머지 공백을 채움
+		int afterDays = 7- (dayOfWeek + dayOfMonth)%7;
+		for (int i = 1; i <= afterDays; i++) {
+			System.out.printf("%d\t",i);
+			
+		}
+	}
+	
+	
+	
+	
 }
