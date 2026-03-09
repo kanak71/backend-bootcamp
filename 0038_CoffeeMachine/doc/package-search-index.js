@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.min.coffee"},{"l":"com.min.coffee.kind"},{"l":"com.min.coffee.print"},{"l":"com.min.edu.machine"}];updateSearchResults();

@@ -15,8 +15,16 @@ public class ExceptionMain {
 //		step03.calculation();
 		
 		//TODO 005_01 finally block : 예외 발생시에만 실행되는 영역(연산)
-		Exception_Method_Step05 step05 = new Exception_Method_Step05();
-		step05.calculation();
+//		Exception_Method_Step05 step05 = new Exception_Method_Step05();
+//		step05.calculation();
+		
+		//TODO 007_01 Checked Exception, throw/throws
+		Exception_Method_Step07 step07 = new Exception_Method_Step07();
+		try {
+			step07.make();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
