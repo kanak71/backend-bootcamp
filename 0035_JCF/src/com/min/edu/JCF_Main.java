@@ -10,13 +10,13 @@ public class JCF_Main {
 		
 		//TODO 출력 002
 		Map_Feature map = new Map_Feature();
-		//map.map_check();
-		//map.map();
+		map.map_check();
+		map.map();
 		
 		//TODO 출력 003
-		Set_Feature set = new Set_Feature();
-		set.set_Array();
-		set.set();
+//		Set_Feature set = new Set_Feature();
+//		set.set_Array();
+//		set.set();
 	}
 	
 	/*

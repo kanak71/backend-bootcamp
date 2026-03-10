@@ -23,6 +23,6 @@ public class ParentsClass {
 		System.out.println(name);	
 	}
 
-	
+
 
 }

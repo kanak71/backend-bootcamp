@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.min.edu</groupId>
+  <artifactId>0041_Stream</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>0041_Stream</name>
+  <url>http://maven.apache.org</url>
+
+<!-- 
+	properties는 pom.xml 문서에서 공통으로 사용할 변수와 값 입니다
+	String project.build.sourceEncoding - "UTF-8";
+	-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+<!-- dependencies 영역 : 프로젝트에서 사용할 외부 라이브러리르 정의하는 영역
+						dependency 정의 하면 자동으로 다운로드하여 Maven Dependencies 폴더에 자동 import 해준다
+-->
+  <dependencies>
+  <!-- 문자처리(잘라내거나, null체크, trim)를 구글에서 향상되게 만들어 놓은 라이브러리 -->
+	<dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>33.5.0-jre</version>
+	    <scope>compile</scope>
+	</dependency>
+	
+	<!-- 
+		파일을 읽고 쓰고 할 때 필요한 라이브러리
+	-->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.16.1</version>
+	    <scope>compile</scope>
+	</dependency>
+		
+	<!-- JSON 형태의 문장을 java 객체로 변환해주는 라이브러리
+		공공데이터는 다 GSON으로 되어 있다
+		simple-json, jackson-bind
+	-->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.10.1</version>
+	    <scope>compile</scope>
+	</dependency>
+	
+	
+  </dependencies>
+  
+  <!-- 프로젝트의 버전, 배포, git webhook, docker hub 등의 설정을 작성하는 곳 -->
+  <build>
+  	<plugins>
+   		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			<version>3.10.1</version>
+			<configuration>
+				<source>21</source>
+				<target>21</target>
+			</configuration>
+   		</plugin>
+   </plugins>
+  </build>
+</project>

@@ -70,7 +70,7 @@ public class Map_Feature {
 		Iterator<String> iter = keys.iterator();
 		// 3단계 : 객체가 없을때까지 향상된 for문으로 출력한다
 		//		Iterator 패턴
-		while(iter.hasNext()) {	//Iterator 객체 안의 객체를 확인한다. 있으면 treu
+		while(iter.hasNext()) {	//Iterator 객체 안의 객체를 확인한다. 있으면 true
 			String tmp = iter.next();
 			System.out.println(tmp + ":" + map.get(tmp));
 			
