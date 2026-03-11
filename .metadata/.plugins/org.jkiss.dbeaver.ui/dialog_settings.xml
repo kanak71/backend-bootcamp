@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DBeaver.DriverTabbedViewer">
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
+		<item key="DIALOG_X_ORIGIN" value="561"/>
+		<item key="DIALOG_Y_ORIGIN" value="188"/>
+		<item key="DIALOG_WIDTH" value="940"/>
+		<item key="DIALOG_HEIGHT" value="625"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DBeaver.QM.LogViewer">
+	</section>
+	<section name="ResultSetViewer">
+		<section name="presentations">
+			<section name="spreadsheet">
+				<item key="enabledPanelIds" value="value-view"/>
+				<item key="activePanelId" value="value-view"/>
+				<item key="panelRatio" value="300"/>
+				<item key="panelsVisible" value="true"/>
+				<item key="verticalLayout" value="false"/>
+			</section>
+		</section>
+	</section>
+	<section name="DBeaver.QM.EventViewDialog">
+		<item key="DIALOG_X_ORIGIN" value="746"/>
+		<item key="DIALOG_Y_ORIGIN" value="375"/>
+		<item key="DIALOG_WIDTH" value="571"/>
+		<item key="DIALOG_HEIGHT" value="277"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DBeaver.StandardErrorDialog">
+		<item key="showDetails" value="false"/>
+		<item key="DIALOG_X_ORIGIN" value="806"/>
+		<item key="DIALOG_Y_ORIGIN" value="455"/>
+	</section>
+	<section name="DBeaver.ScriptSelectorPopup">
+		<item key="DIALOG_X_ORIGIN" value="754"/>
+		<item key="DIALOG_Y_ORIGIN" value="316"/>
+		<item key="DIALOG_WIDTH" value="555"/>
+		<item key="DIALOG_HEIGHT" value="365"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="DBeaver.SelectDataSourceDialog">
+		<item key="DIALOG_X_ORIGIN" value="894"/>
+		<item key="DIALOG_Y_ORIGIN" value="100"/>
+		<item key="DIALOG_WIDTH" value="275"/>
+		<item key="DIALOG_HEIGHT" value="689"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="showConnected" value="false"/>
+	</section>
+</section>
