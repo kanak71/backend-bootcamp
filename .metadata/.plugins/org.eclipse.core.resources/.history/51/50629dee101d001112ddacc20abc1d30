@@ -1,0 +1,80 @@
+-- SELECT 기본 문법 INTRO
+
+-- 기본 SYNTEX
+-- SELECT 컬럼명, 컬럼명 FROM 테이블명 [WHERE 컬럼='값']
+
+-- 1) 와일드카드 * (wild card - 전체 컬럼)
+-- Q. 축구선수들(PLAYER)의 정보를 모두(*) 조회(SELECT)하고 싶다
+
+SELECT * 
+	FROM PLAYER p;
+
+-- '(Single Quote), "(Double Quote)
+-- ' SQL문에서 값, " 대소문자의 예약어 컬럼의 정의 할 때 사용
+
+--Q. 축구선수들 중에서 PLAYER_ID가 2008468인 선수의 아이디와, 선수이름, 포지션을 조회하고싶다
+
+SELECT p.PLAYER_ID, p.PLAYER_NAME, p."POSITION"	--POSITION은 예약어이기 때문에 ""으로 컬럼지정해 줘야 한다
+	FROM PLAYER p
+	WHERE p.PLAYER_ID = '2008468';
+
+--Q. 축구선수들 중에서 선수 이름 김성환인 선수의 아이디와, 선수이름, 포지션의 정보를 조회하고싶다
+-- 테이블선정 : 축구선수들(PLAYER)
+-- 조건(선택) : 선수 아이디가 김성환, PLAYER_NAME ='김성환'
+-- 조회컬럼 : 아이디와, 선수이름, 포지션 | PLAYER_ID, PLAYER_NAME, "POSITION"
+
+SELECT p.PLAYER_ID, p.PLAYER_NAME, p."POSITION"
+	FROM PLAYER p
+	WHERE p.PLAYER_NAME = '김성환';
+
+--Q. 축구선수 정보중에서 선수 아이디, 선수 이름, 포지션을 조회
+-- 출력되는 컬럼명을 한글로 변경해 주세요
+SELECT p.PLAYER_ID AS 아이디,	--AS는 생략이 가능
+	p.PLAYER_NAME 성명,
+	p."POSITION" 포지션
+	FROM  PLAYER p; 
+
+-- "사용할때는 Alias에는 공백이 있을 때 하나의 묶음으로 정의
+SELECT p.PLAYER_ID AS 아이디,	--AS는 생략이 가능
+		p.PLAYER_NAME "선수 성명",
+		p."POSITION" 포지션,
+		p.BACK_NO,
+		'1'
+	FROM  PLAYER p; 
+
+-- 축구선수에서 POSITION은 예약어이다. 따라서 대소문자를 구분, 예약어는 사용하지 않아야하고, 명확하게 컬럼명을 정의 해줘야 한다
+-- " 지정해줘야한다. USER
+CREATE TABLE "USER"(
+	ID NUMBER,
+	NAME VARCHAR2(100)
+);
+
+SELECT *
+	FROM "USER";
+
+SELECT *
+	FROM player;
+
+--Alias (테이블, 컬럼)
+-- 컬럼 : 출력되는 컬럼의 명은 변경, ID AS 컬럼명, 공백이 있거나 예악어라면 ID AS "컬 럼명"
+-- 테이블 FROM 절에서 사용되는 테이블의 간편이름
+-- ** ANSI/ISO 표준기구, FROM절 Alias 사용하라고 권고
+-- ** PROGRAMRS 에서 DB FROM Alias가 없으면 정답이라고 인정하지 않음
+
+--Q. 축구선수들의 정보를 모두 조회해 주세요
+SELECT *
+	FROM PLAYER p;
+	
+SELECT PLAYER.*
+	FROM PLAYER p;
+
+
+SELECT p.*
+	FROM PLAYER p;
+
+--Q. 축구선수들의 정보중에서 선수이름 선수영문이름을 조회해 주세요
+-- 1)
+SELECT PLAYER_NAME, E_PLAYER_NAME
+	FROM PLAYER p;
+
+	
