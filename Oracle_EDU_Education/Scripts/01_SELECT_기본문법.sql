@@ -146,6 +146,47 @@ SELECT *
 	FROM EMP e
 	WHERE e.EMPNO = '7876' OR e.EMPNO = '7369';
 
+-- SQL 연산자(IN)을 사용하면 코드가 간결해진다
+-- 계속해서 조건의 EMPNO가 늘어나면 반복되는 코드가 많아지게 된다. IN SQL연산자를 통해서 해당 코드를 줄일 수 있다
+SELECT *
+	FROM EMP e
+	WHERE e.EMPNO IN('7876', '7369') ;
+
+----
+
+
+
+
+-- 시험문제
+-- Q. 사원테이블에서 사원아이디가 7369이면서 업무가 CLERK인 사원과
+--				사원아이이가 7566이면서 업무가 MANAGER인 사원을 조회
+SELECT *
+	FROM EMP e
+	WHERE e.EMPNO ='7369' AND e.JOB ='CLERK'
+	OR e.EMPNO = '7566' AND e.JOB ='MANAGER';
+
+SELECT *
+	FROM EMP e
+	WHERE (e.EMPNO , e.JOB) IN (('7369', 'CLERK'), ('7566','MANAGER'));
+
+-- 시험문제(DISTINCT) 함수
+-- 정의 : SELECT 절에 검색된 컬럼의 결과에 중복되는 값이 있다면 한개로 만들어준다
+-- 주의점 : !! 단, 선택된 SELECT 절의 다른 컬럼에 영향을 받는다
+--Q. 축구선수의 이름과 포지션의 정보를 조회
+SELECT p.PLAYER_NAME , p.:
+	FROM PLAYER p;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	
