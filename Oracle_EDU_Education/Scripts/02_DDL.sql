@@ -70,7 +70,7 @@ SELECT USERINFO_SEQ.NEXTVAL
 
 
 -- 3) CONSTRAINT 제약조건 PK, FK 생성방법
--- 조건 : CONSTRAINT에서 P, FK는 사용하기 위해서 반드시 테이블이 생성되어 있어야 한다
+-- 조건 : CONSTRAINT에서 PK, FK는 사용하기 위해서 반드시 테이블이 생성되어 있어야 한다
 --       DEFAULT , CHECK TABLE을 생성할때 작성하는게 편하다 : 데이터에의 문제 
 -- 결론 : 데이터가 있을때는 왠만하면 하지 마세요
 

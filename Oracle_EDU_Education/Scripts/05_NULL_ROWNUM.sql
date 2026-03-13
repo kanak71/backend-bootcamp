@@ -120,6 +120,46 @@ SELECT ROWNUM RN, ENAME, EMPNO , HIREDATE , SAL
 			FROM EMP e 
 			ORDER BY e.HIREDATE DESC)
 	WHERE RN BETWEEN 1 AND 3;
+
+
+SELECT *
+	FROM PLAYER p 
+	ORDER BY 1
+	OFFSET 5 ROWS FETCH NEXT 5 ROWS ONLY;
+-- 3) 페이징 : 최신순(날짜:DESC) 으로 각 묶음(3 묶음 그룹)
+--           10명 -> ORDER BY 날짜 DESC -> 번호 ROWNUM -> BETWEEN 3(13) 3(46) 3(7~9) 1(10)
+
+SELECT *
+	FROM (	SELECT ROWNUM RN , ENAME, EMPNO, HIREDATE, SAL
+				FROM(
+					SELECT e.ENAME , e.EMPNO , e.HIREDATE , e.SAL
+						FROM EMP e 
+						ORDER BY e.HIREDATE DESC
+			    	)
+		)
+	WHERE RN BETWEEN 1 AND 3;
+
+
+--OFFSET (페이지번호-1) * 페이지크기 ROWS
+--FETCH NEXT 페이지크기 ROWS ONLY
+SELECT *
+	FROM PLAYER p 
+	ORDER BY 1
+	OFFSET 5 ROWS FETCH NEXT 5 ROWS ONLY;
+
+
+-- mysql , postregsql
+
+--OFFSET = (페이지번호 - 1) × 페이지크기
+--OFFSET = (3 - 1) × 10
+--OFFSET = 20
+
+--페이지 크기 = 10
+--3페이지 조회
+
+--SELECT *
+--FROM PLAYER
+--LIMIT 10 OFFSET 20;
 		
 
 
