@@ -1,0 +1,28 @@
+-- WITHIN GROUP 절 LISTADD, RANK, DENCE_RANK 함수 함께 사용
+-- GROUP BY 뭔가를 처리 해야 한다. JOIN 절이 필요하다 따라서 줄여 보자
+
+-- 1) LISTAGG 를 통함 컬럼을 LIST로 만든다
+SELECT LISTAGG(e.JOB , ',') AS JOB_ARRAY
+	FROM EMP e ;
+
+-- 2) 집합된 리스트에서 SORT 진행한다
+SELECT LISTAGG(JOB,',') WITHIN GROUP(ORDER BY JOB) AS JOB_ARRAY_SORT
+	FROM (
+		  SELECT DISTINCT(e.JOB) JOB
+		  	FROM EMP e 
+		);
+
+-- 3) 각부서별 급여의 우선순위(RANK 함수) - WINDOW FUNCTION
+SELECT e.DEPTNO , SAL, e.ENAME ,
+		RANK() OVER(PARTITION BY e.DEPTNO ORDER BY SAL DESC) 급여순위
+	FROM EMP e 
+	ORDER BY 1;
+
+-- 4) 집계 함수 중에서 1100의 급여를 가지고 있는 ROW의 등수
+SELECT RANK(1000) WITHIN GROUP(ORDER BY SAL DESC) "등수"
+	FROM EMP e ;
+	
+
+
+
+

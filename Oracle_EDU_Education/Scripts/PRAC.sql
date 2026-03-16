@@ -25,3 +25,63 @@ SELECT *
 	WHERE ROWNUM <= 3;
 
 ROLLBACK;
+
+COMMIT;
+
+
+SELECT UPPER(e.ENAME )
+	FROM EMP e;
+
+SELECT LOWER(e.ENAME )
+	FROM EMP e;
+
+SELECT CONCAT(e.COMM , e.DEPTNO )
+	FROM EMP e;
+
+SELECT LENGTH(e.ENAME )
+	FROM EMP e;
+
+SELECT SUBSTR(e.ENAME,2,3)
+	FROM EMP e;
+
+SELECT INSTR(e.ENAME,'I')
+	FROM EMP e;
+
+SELECT TRIM(e.ENAME)
+	FROM EMP e;
+
+SELECT LTRIM(e.ENAME,'S')
+	FROM EMP e;
+
+SELECT RTRIM(e.ENAME,'H')
+	FROM EMP e;
+
+
+SELECT LPAD(e.ENAME,'3', 'R')	
+	FROM EMP e;
+
+SELECT RPAD(e.ENAME,'10', 'R')	
+	FROM EMP e;
+
+--질문 : LPAD나 RPAD를 사용하면 SMITH -> RRSMITH / SMITHRR 같이 나올 줄 알았는데
+--		둘 다 결과가 SMITH -> SMI로 나오는데 그 이유가 뭔가요?
+-- 답 : 두번째의 '3'이 [ENAME의 길이도 포함된]이다 그래서 10으로 바꿨을 떈[SMITH_____]이 되어 뒤에 R이 들어간다
+
+
+
+SELECT CEIL(1.3)
+	FROM DUAL;
+
+SELECT LPAD('1','3','0')
+	FROM DUAL;
+
+ROLLBACK;
+
+
+
+
+
+
+
+
+
