@@ -1,0 +1,44 @@
+-- FIRST VALUE, LAST_VALUE
+-- 앞뒤에 있는 값을 가져오는 것
+-- Q. 부서별 직원들의 연봉이 높은 순으로 정렬, 파티션 내에서 처음에 나온 값을 출력
+
+SELECT e.EMPNO , MAX(SAL) "연봉이 높은순"
+	FROM EMP e
+	GROUP BY e.EMPNO ;
+
+SELECT EMPNO, DEPTNO, SAL, ENAME,
+	FIRST_VALUE(ENAME) OVER(PARTITION BY DEPTNO ORDER BY SAL DESC) 첫번째ROW,
+	LAST_VALUE(ENAME) OVER(PARTITION BY DEPTNO ORDER BY SAL DESC) 마지막ROW
+	FROM EMP e;
+-- 분석 : 
+-- FIRST_VALUE ROW의 첫번째 ROW를 출력하기 때문에 큰값처럼 보임
+-- LAST_VALUE 현재 자신의 ROW가 마지막이 되기 때문에 자신의 값이 나옴
+--  ㄴ 따라서 현재의 DEFAULT WINDOWING 절은 CURRENT ROW로 되어 있다
+
+-- WINDOWING 절 분석
+SELECT e.EMPNO ,SAL, e.ENAME,
+	LAST_VALUE(ENAME) OVER(PARTITION BY e.DEPTNO 	--부서별
+							ORDER BY SAL DESC 	--급여가 높은 순으로 정렬한다. 마지막꺼를 찾기위해서
+							ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING
+							) AS 마지막 ,
+	FIRST_VALUE(ENAME) OVER(PARTITION BY e.DEPTNO 
+							ORDER BY SAL DESC
+							ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+							) 처음
+	FROM EMP e;
+
+-- LAG(이전값), LEAD(이후값)
+-- LAG|LEAD 는 (컬럼, 앞/뒤 ROW값, NULL을 치완 값)
+SELECT ENAME, SAL,
+	LAG(ENAME,2, '없음') OVER(PARTITION BY e.DEPTNO ORDER BY SAL DESC)
+	FROM EMP e 
+	WHERE e.DEPTNO ='20';
+
+
+
+
+
+
+
+
+
