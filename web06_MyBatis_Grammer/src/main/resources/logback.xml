@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO 004 로그 처리를 위한 logback xml 파일 작성 -->
+<configuration scan="true">
+
+	<property name="LOG_PATH" value="c:/logs" />
+	<property name="LOG_FILE_NAME" value="sampleLog" />
+
+	<property name="LOG_PATTERN"
+		value="%-5level %d{yy-MM-dd HH:mm:ss}[%thread] [%logger{0}:%line] - %msg%n" />
+
+
+	<property name="LOG_LEVEL" value="WARN" />
+
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} : %30logger{5} - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+		<file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>
+
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${LOG_PATTERN}</pattern>
+		</encoder>
+
+
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+			<fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+
+			<maxHistory>30</maxHistory>
+
+		</rollingPolicy>
+	</appender>
+
+		<logger name="jdbc.sqlonly" level="OFF" />
+		<logger name="jdbc.sqltiming" level="OFF" />
+		<logger name="jdbc.resultsettable" level="OFF" />
+		<logger name="jdbc.audit" level="OFF" />
+		<logger name="jdbc.resultset" level="OFF" />
+		<logger name="jdbc.connection" level="OFF" />
+		<logger name="org.mybatis" level="OFF" />
+		<logger name="org.springframework" level="OFF" />
+		<logger name="com.min.edu.model.mapper" level="OFF" />
+		<logger name="ch.qos.logback" level="O"/>
+
+
+
+	<root level="${LOG_LEVEL}">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <!-- TODO 00701 myBatis 환경설정을 위한 configuration xml 파일 작성 -->
+<configuration>
+	<!-- TODO 00702 DB접속 값을 가지고 있는 properties 파일을 읽어 온다 -->
+	<properties resource="oracle.properties" />
+	
+	<!-- TODO 00703 resultType과 ParameterType이 될 DTO 객체를 Alias로 사용한다 -->
+	<typeAliases>
+		<typeAlias type="com.min.edu.dto.JobsDto" alias="JobsDto"/>
+	</typeAliases>
+	
+	<!-- TODO 00704 DB접속 정보 작성 : DataSource -->
+	<environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${pw}"/>
+      </dataSource>
+    </environment>
+  </environments>
+	
+<mappers>
+	<mapper resource ="Jobs_Statement.xml"/>
+</mappers>
+	
+</configuration>

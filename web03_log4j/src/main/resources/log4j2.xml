@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+<!-- Appenders 사용할 로그의 객체를 선언하는 부분 Console, 파일로 저장-->
+  <Appenders>
+  
+  <!-- name="Console"로 객체를 선언 -->
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    
+    <!-- name="File"로 객체를 선언 
+    RollingFile은 하루에 한번씩 파일을 새로 만드는 규칙
+    -->
+    <RollingFile name="File" fileName="./logs/log4j2.log"
+     					filePattern="./logs/log4j2_%d{yyyy-MM-dd}_%i.log.gz">
+    	<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    	<Policies>
+    		<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+    		 <SizeBasedTriggeringPolicy size="200KB"/>
+    	</Policies>
+    	<DefaultRolloverStrategy max="10" fileIndex="min"/>
+    </RollingFile>
+    
+  </Appenders>
+  
+  <!-- Loggers는 출력을 할 때 자동으로 출력되어야할 로그의 패키지를 선택적으로 선정
+  <logger name="jdbc.connection" level="OFF"/> level이 off 출력을 하지 않겠다
+  <logger name="jdbc.resultset" level="TRACE"/> level을 상세로 출력하겠다
+   => 예시, SQL문의 결과와 쿼리를 보겠다
+   *** Console과 File에 모두 적용된다
+   -->
+   
+  <Loggers>
+  	<logger name="jdbc.connection" level="OFF"/>
+  	<logger name="jdbc.resultset" level="TRACE"/>
+  	<logger name="jdbc.sqlonly" level="TRACE"/>
+  
+  
+  <!-- 
+  사용한 HTML의 객체를 작성
+  Log Level : 상세(Trace) -> 위험할때만(Patal)
+  -->
+    <Root level="DEBUG">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>

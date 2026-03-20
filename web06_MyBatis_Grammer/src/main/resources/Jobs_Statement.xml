@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- TODO 01001 쿼리문을 작성하는 mapper -->
+
+<!-- TODO 01002 xml을 호출하기 위한 고유한 값 namespace 작성 -->
+<mapper namespace="com.min.edu.jobs">
+	
+	<!-- TODO 01003 쿼리 작성 및 resultType, ParameterType 작성 -->
+	<select id="selectALLJobs" resultType ="JobsDto">
+		SELECT JOB_ID, JOB_NAME, MIN_SALARY, MAX_SALATY
+			FROM JOBS
+	</select>
+
+</mapper>

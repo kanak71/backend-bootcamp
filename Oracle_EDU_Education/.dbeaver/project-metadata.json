@@ -1,1 +1,0 @@
-{"resources":{"Scripts/00_Data.sql":{"default-schema":"EDU","default-datasource":"oracle_thin-19cdabbf094-7f2484fea37c1019"},"Scripts/01_SELECT_기본문법.sql":{"default-schema":"EDU","default-datasource":"oracle_thin-19cdabbf094-7f2484fea37c1019"},"Scripts/02_DDL.sql":{"default-datasource":"oracle_thin-19cdabbf094-7f2484fea37c1019","default-schema":"EDU"}}}

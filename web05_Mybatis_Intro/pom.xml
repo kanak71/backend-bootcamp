@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.min.edu</groupId>
+	<artifactId>web05_Mybatis_Intro</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>web05_Mybatis_Intro Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- TODO 002 OJDBC 11-->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<version>23.9.0.25.07</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- TODO 003 Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.19</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- TODO 004 Logback -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.4.14</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.4.14</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- TODO 005 JUnit 4-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+	<build>
+		<finalName>web05_Mybatis_Intro</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<target>21</target>
+					<source>21</source>
+				</configuration>
+				<version>3.13.0</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
