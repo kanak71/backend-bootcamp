@@ -8,6 +8,10 @@
 	<!-- TODO 00702 DB접속 값을 가지고 있는 properties 파일을 읽어 온다 -->
 	<properties resource="oracle.properties" />
 	
+	<settings>
+	    <setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
 	<!-- TODO 00703 resultType과 ParameterType이 될 DTO 객체를 Alias로 사용한다 -->
 	<typeAliases>
 		<typeAlias type="com.min.edu.dto.JobsDto" alias="JobsDto"/>
@@ -28,6 +32,7 @@
 	
 <mappers>
 	<mapper resource ="Jobs_Statement.xml"/>
+	<mapper resource ="sqls/select_Statement.xml"/>
 </mappers>
 	
 </configuration>

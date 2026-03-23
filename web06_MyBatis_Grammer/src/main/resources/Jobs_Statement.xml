@@ -9,7 +9,7 @@
 	
 	<!-- TODO 01003 쿼리 작성 및 resultType, ParameterType 작성 -->
 	<select id="selectALLJobs" resultType ="JobsDto">
-		SELECT JOB_ID, JOB_NAME, MIN_SALARY, MAX_SALATY
+		SELECT JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY
 			FROM JOBS
 	</select>
 

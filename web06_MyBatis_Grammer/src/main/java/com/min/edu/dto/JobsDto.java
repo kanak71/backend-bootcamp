@@ -7,7 +7,7 @@ public class JobsDto {
 	private int min_salary, max_salary;
 	
 
-	public JobsDto(String job_id, String job_title, int min_salary, int max_salary) {
+	public JobsDto() {
 		super();
 		this.job_id = job_id;
 		this.job_title = job_title;

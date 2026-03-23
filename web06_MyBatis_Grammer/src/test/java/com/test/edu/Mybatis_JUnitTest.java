@@ -14,6 +14,7 @@ import com.min.edu.mybatis.SqlSessionFactoryManager;
 
 public class Mybatis_JUnitTest {
 
+	//TODO 009 MyBatis 객체인 sqlSessionFactory 객체 생성 확인
 	@Test
 	public void test() {
 		SqlSessionFactory manager =  SqlSessionFactoryManager.getFactory();
