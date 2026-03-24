@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.model.BindingRepositoryImpl">
+
+
+	<sql id ="jobsAll">
+		SELECT j.JOB_ID , j.JOB_TITLE , j.MIN_SALARY , j.MAX_SALARY
+			FROM JOBS j
+	</sql>
+
+
+	<!-- 
+		1. #{} : 값 -> '값' => 입력값
+		   ${} : 값 -> 값 => 컬럼
+	 -->
+	 
+	 <select id="binding01" parameterType="java.util.Map"
+	 						resultType="JobsVo">
+	 	<include refid="jobsAll"/>
+	 	WHERE ${column} = #{value} 
+	 </select>
+	 
+	 
+	 <!-- 
+	 	2. like문 : SQL Inject 공격에 취약한 코드
+	 	** SQL Inject 공격이란?
+	 		쿼리에 결과와 다른 테이블을 SQL문을 통해서 조회하는 해킹 방식
+	  -->
+	  
+	 <select id="binding02" resultType="JobsVo">
+	  	SELECT j.JOB_ID , j.JOB_TITLE , j.MIN_SALARY , j.MAX_SALARY
+		FROM JOBS j
+		WHERE j.JOB_ID LIKE '%'||#{key}||'%'	<!-- sql 인젝션 공격을 피하기 위해 이렇게 적음 -->
+	 </select>
+
+</mapper>

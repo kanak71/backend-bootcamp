@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.model.SelectKeyRepository">
+
+	<insert id="insertUserInfo">
+		<selectKey keyProperty="seq" resultType="java.lang.Integer" order="BEFORE">
+				SELECT USERINFO_SEQ.NEXTVAL SEQ FROM DUAL
+		</selectKey>
+		INSERT INTO USERINFO (SEQ, NAME, TEL, CREATEAT, UNIV_ID)
+		VALUES(#{seq}, #{name}, #{tel}, SYSDATE, 'U01')
+	</insert>
+	
+	<select id="detailUserInfo" resultType="UserInfoVo">
+		SELECT SEQ, NAME, TEL, CREATEAT, UNIV_ID
+		FROM USERINFO u 
+		WHERE SEQ = #{seq}
+	</select>
+	
+</mapper>

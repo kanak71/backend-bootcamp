@@ -33,6 +33,7 @@
 <mappers>
 	<mapper resource ="Jobs_Statement.xml"/>
 	<mapper resource ="sqls/select_Statement.xml"/>
+	<mapper resource="sqls/Insert_Delete_Update_Statement.xml"/>
 </mappers>
 	
 </configuration>

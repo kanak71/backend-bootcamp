@@ -64,17 +64,17 @@ public class Select_JUnitTest {
 	}
 	
 	//TODO 01602 테스트
-//	@Test
-	public void select05_test() {
-		JobsDto inDto = new JobsDto();
-		inDto.setJob_id("IT_PROG");
-		inDto.setJob_title("Programmer_");
-			
-		JobsDto outDto = selectRepository.select05(inDto);
-		System.out.println(outDto); //*****
-		assertNotNull(outDto);
-			
-	}
+////	@Test
+//	public void select05_test() {
+//		JobsDto inDto = new JobsDto();
+//		inDto.setJob_id("IT_PROG");
+//		inDto.setJob_title("Programmer_");
+//			
+//		JobsDto outDto = selectRepository.select05(inDto);
+//		System.out.println(outDto); //*****
+//		assertNotNull(outDto);
+//			
+//	}
 	
 	//TODO 01702 select06 테스트
 	//결과가 여러개는 List로, 결과가 없다면 List의 size()가 0

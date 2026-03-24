@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties resource="db/oracle.properties" />
+	
+	<!-- 쿼리문과 SQL의 결과를 출력해주는 Settings 값 -->
+	<settings>
+	    <setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<!-- TODO 005 생성된 VO를(mapper 파일에서) 쉽게 사용할 수 있도록 Alias로 선언-->
+	<typeAliases>
+		<typeAlias type="com.min.edu.dto.JobsVo" alias="JobsVo"/>
+		<typeAlias type="com.min.edu.dto.UserInfoVo" alias="UserInfoVo"/>
+	
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${user}" />
+				<property name="password" value="${pw}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="sqls/Binding.xml"/>
+		<mapper resource="sqls/SelectKey.xml"/>
+	</mappers>
+
+</configuration>
+ 
