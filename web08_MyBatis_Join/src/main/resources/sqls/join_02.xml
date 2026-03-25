@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.join02">
+
+	<!-- 
+		TODO 100 각 테이블이 매핑되는 DTO를 따로 작성하고
+		부모가 되는 DTO에 여러명의 자식을 가질 수 있도록 List된 멤버를 선언한다
+		호출 방법 >부모.자식
+			OGNL(object graph notation language) : 객체 그래프 탐색 방식
+			 - 객체의 속성 메소드를 접근하기 위해서(.) 표기법을 사용
+			 - 중첩되거나 하위에 속해있는 속성을 간단히 접근 가능하다 
+			 ex) info.name, info.address.si
+	 -->
+	 
+	 <resultMap type="com.min.edu.dto.Team01Dto" id="teamJoinDto">
+	 	<!-- Team의 정보를 매핑 -->
+	 		<result column="TEAM_NAME" property="team_name"/>
+	 		<result column="REGION_NAME" property="region_name"/>
+	 		<result column="ADDRESS" property="address"/>
+	 		<result column="HOMEPAGE" property="homepage"/>
+	 	<!-- Team의 하위에 있는 pDto에 Player 정보를 담음 -->
+	 		<result column="PLAYER_ID" property="pDtos.player_id"/>
+	 		<result column="PLAYER_NAME" property="pDtos.player_name"/>
+	 		<result column="BACK_NO" property="pDtos.back_no"/>
+	 		<result column="POSITION" property="pDtos.position"/>
+	 </resultMap>
+	 
+	 <select id="join02" resultMap="teamJoinDto">
+	 SELECT p.PLAYER_ID , p.PLAYER_NAME , p.BACK_NO , P."POSITION" ,
+		t.TEAM_NAME, t.REGION_NAME , t.ADDRESS , t.HOMEPAGE 
+		FROM PLAYER p JOIN TEAM t 
+		USING(TEAM_ID)
+	 
+	 </select>
+	 
+</mapper>

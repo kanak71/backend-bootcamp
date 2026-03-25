@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.join01">
+
+<!-- TODO 002 하나의 AllDto 결과 출력 -->
+	<select id="join01" resultType="com.min.edu.dto.AllDto">
+		SELECT p.PLAYER_ID , p.PLAYER_NAME , p.BACK_NO , P."POSITION" ,
+				t.TEAM_NAME, t.REGION_NAME , t.ADDRESS , t.HOMEPAGE 
+			FROM PLAYER p JOIN TEAM t 
+			USING(TEAM_ID)
+	</select>
+
+</mapper>

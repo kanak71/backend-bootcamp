@@ -33,6 +33,7 @@
 	<mappers>
 		<mapper resource="sqls/Binding.xml"/>
 		<mapper resource="sqls/SelectKey.xml"/>
+		<mapper resource="sqls/Dynamic.xml"/>
 	</mappers>
 
 </configuration>

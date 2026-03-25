@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.join03">
+
+	<!-- 
+		MyBatis에서 제공해 주고 있는 collection을 통해서 team 15개, player 483개
+		하지만 row의 개수만큼 객체가 생성되는 것이 아니라
+		Main(부모)가 되는 team의 개수만큼 출력이 된다
+	 -->
+	 
+	 <resultMap type="com.min.edu.dto.Team01Dto" id="teamJoinDto">
+	 	<!-- Team의 정보를 매핑 -->
+	 		<result column="TEAM_NAME" property="team_name"/>
+	 		<result column="REGION_NAME" property="region_name"/>
+	 		<result column="ADDRESS" property="address"/>
+	 		<result column="HOMEPAGE" property="homepage"/>
+	 		
+	 		<collection property="pDtos" resultMap="PlayerDto"/>
+	 	
+	 </resultMap>
+	 
+	 <resultMap type="com.min.edu.dto.Player01Dto" id="PlayerDto">
+	 	<!-- Team의 하위에 있는 pDto에 Player 정보를 담음 -->
+	 		<result column="PLAYER_ID" property="player_id"/>
+	 		<result column="PLAYER_NAME" property="player_name"/>
+	 		<result column="BACK_NO" property="back_no"/>
+	 		<result column="POSITION" property="position"/>
+	 </resultMap>
+	 
+	 	 <select id="join03" resultMap="teamJoinDto">
+		 SELECT p.PLAYER_ID , p.PLAYER_NAME , p.BACK_NO , P."POSITION" ,
+			t.TEAM_NAME, t.REGION_NAME , t.ADDRESS , t.HOMEPAGE 
+			FROM PLAYER p JOIN TEAM t 
+			USING(TEAM_ID)
+	 
+	 </select>
+
+	 
+</mapper>
