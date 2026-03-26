@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.min.edu.dto.AllDto;
 import com.min.edu.dto.Team01Dto;
+import com.min.edu.dto.Team04Dto;
 import com.min.edu.mybatis.SqlSessionFactoryManager;
 
 public class PlayerDaoImpl implements IPlayerDao {
@@ -36,6 +37,12 @@ public class PlayerDaoImpl implements IPlayerDao {
 	public List<Team01Dto> join03() {
 		 SqlSession session = manager.openSession();
 			return session.selectList(NS3+"join03");
+	}
+	 
+	@Override
+	public List<Team04Dto> join04() {
+		SqlSession session = manager.openSession();
+		return session.selectList(NS4+"join04");
 	}
 
 }

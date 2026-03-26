@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.min.edu.join04">
+	<!-- 하나의 TEAM에 여러명의 PLAYER를 가질 수 있다 1:N관계 { team : [{Player1}, {Player2}, 
+		...] } -->
+
+	<resultMap type="com.min.edu.dto.Team04Dto" id="TeamDto">
+		<result column="TEAM_NAME" property="team_name" />
+		<result column="REGION_NAME" property="region_name" />
+		<result column="ADDRESS" property="address" />
+		<result column="HOMEPAGE" property="homepage" />
+
+		<collection property="playerDtos" resultMap="PlayerDto"></collection>
+
+
+
+	</resultMap>
+
+	<resultMap type="com.min.edu.dto.Player04Dto" id="PlayerDto">
+		<result column="PLAYER_ID" property="player_id" />
+		<result column="PLAYER_NAME" property="player_name" />
+		<result column="BACK_NO" property="back_no" />
+		<result column="POSITION" property="position" />
+
+	</resultMap>
+
+	<select id="join04" resultMap="TeamDto">
+		SELECT p.PLAYER_ID , p.PLAYER_NAME , p.BACK_NO , P."POSITION" ,
+		t.TEAM_NAME, t.REGION_NAME , t.ADDRESS , t.HOMEPAGE
+		FROM PLAYER p JOIN TEAM t
+		USING(TEAM_ID)
+
+	</select>
+
+
+</mapper>

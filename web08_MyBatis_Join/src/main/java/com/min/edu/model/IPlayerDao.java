@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.min.edu.dto.AllDto;
 import com.min.edu.dto.Team01Dto;
+import com.min.edu.dto.Team04Dto;
 
 public interface IPlayerDao {
 	
@@ -29,5 +30,18 @@ public interface IPlayerDao {
 	 * mybatis의 <collection>을 사용하여 DTO <resultMap>을 통해서 선언 후 연결
 	 */
 	public List<Team01Dto> join03();
+	
+	/*
+	 * <collection> <association>
+	 * Team04Dto.playerDtosd => List<Player04Dto> => 1:N 관계를 구현한다
+	 * 
+	 * {
+	 * 		"Team_Id:k01", .. , playerDto : [
+	 * 										 {"PLAYER_NAME":"홍길동", "POSITION":"FX"
+	 * 
+	 * 
+	 */
+	
+	public List<Team04Dto> join04();
 
 }

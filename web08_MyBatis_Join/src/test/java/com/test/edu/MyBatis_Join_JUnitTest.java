@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import com.min.edu.dto.AllDto;
 import com.min.edu.dto.Team01Dto;
+import com.min.edu.dto.Team04Dto;
 import com.min.edu.model.IPlayerDao;
 import com.min.edu.model.PlayerDaoImpl;
 import com.min.edu.mybatis.SqlSessionFactoryManager;
@@ -49,10 +50,24 @@ public class MyBatis_Join_JUnitTest {
 	//하지만 mybatis의 <collection>문법을 사용한다면 의존하는 부모의 개수만큼 나온다
 	// 해결 : 멤버필드는 Player01Dto -> List<Player01Dto> 변경하여 사용하면
 	//		1:n의 관계로 구성이 된다
-	@Test
+//	@Test
 	public void join03() {
 		List<Team01Dto> lists = dao.join03();
 		System.out.println("조회된 객체의 개수 : " + lists.size());
 	}
+	
+	@Test
+	public void join04() {
+		List<Team04Dto> oneToMany = dao.join04();
+		// 15개 : team(1)에 여러개(n)의 player가 소속되어서 들어가 있기 때문에
+		System.out.println("조회된 객체의 개수 : " + oneToMany.size());
+		
+		System.out.println("index 0에 소속되어 있는 선수 조회 \n" + oneToMany.get(0));
+		System.out.println("index 0에 소속되어 있는 선수 인원 \n" + oneToMany.get(0).getPlayerDtos().size());
+		System.out.println("index 0(울산현대)에 소속되어 있는 선수의 첫번째 선수");
+		System.out.println(oneToMany.get(0).getPlayerDtos().get(0));
+	}
+	
+	
 
 }

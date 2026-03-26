@@ -22,6 +22,7 @@
   	<mapper resource="sqls/join_01.xml"/>
   	<mapper resource="sqls/join_02.xml"/>
   	<mapper resource="sqls/join_03.xml"/>
+  	<mapper resource="sqls/join_04.xml"/>
   </mappers>
   
   
