@@ -1,0 +1,27 @@
+/* tag + id : 101*/
+div#ho{
+    border: 4px double #ccc;
+    width: 500px;
+
+    height: 60px;
+    position: relative;
+    padding: 10px;
+}
+
+#a, #b{
+    border: 1px solid blue;
+    width: 200px;
+    position: absolute;
+}
+
+#b{
+    right: 10px;
+}
+
+div.container{
+    min-width: 995px;
+}
+
+.container{
+    width: 700px;
+}

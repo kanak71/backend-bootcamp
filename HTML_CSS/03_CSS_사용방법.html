@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type ="text/css">
+        body{
+            /*
+            외부라인두께 2px, 선모양 점선, 색은 라임색
+            배경은 흰색, 마진은 위아래 20px, 왼오 10px
+            안의공간은0px 위 공간만30px
+            폰트 모양은monospace
+            */
+
+            border: 2px dashed lime;
+            background-color: grey;
+            margin: 20px 10px;
+            padding: 0px;
+            padding-top: 30px;
+            font-family: monospace;
+
+
+        }
+
+        
+
+        /*
+            복합선택자 적용 id>class>tag
+        */
+        h1#a{
+            /*101*/
+            background-color: skyblue;
+
+        }
+
+        h1{
+            /*
+                1
+                body의 css 선택자와 같은 등급의 h1으로 작성했다
+                따라서 "작성 순서에 따라서" 적용
+                하위 tag이기 때문에 오버라이드 한다
+            */
+
+            background-color: white;
+        }
+
+        #a{
+                /*100*/
+            background-color: black;
+
+        }
+
+        /*
+            여러개의 선택자에 적용한다면 ,를 통해서 작성하면 된다
+        */
+        h2, span{
+            color: orange;
+
+        }
+
+        h2.ch{
+            color : yellow;
+        }
+        /*
+            클래스의 사용이유
+            여러개의 다른 CSS의 설정을 작성하여 동일한 적용을 하기 위해서
+            a -> background-color
+            b -> font_family
+
+            a1은 글자크기만
+            a2는 글자 색만
+        */
+
+        .a1{
+            font-size: 20px;
+        }
+
+        .a2{
+            color:aqua;
+
+        }
+        /*
+            document(화면)에서 id는 고유하게 한개이어야 한다
+             id="a3" id="a4" 과 같이 두개가 선언되어 있다면 첫번째 id만 동작됨
+        */
+
+        #a4{
+            background-color: yellow;
+        }
+
+        #a3{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="a" class="b a2">음악다방</h1>
+	<h2>수고했어 오늘도</h2>
+	<p>수고 했어 오늘도... 아무도 너의 슬픔에 관심 없대도... 난 널 응원해 수고했어 오늘도</p>
+	
+	<h2>제주도</h2>
+	<p>떠나요 둘이서 모든걸 훌훌버리고... 제주도 푸른섬..</p>
+	
+	<h2 class="ch">한숨</h2>
+	<p>당신의 한숨... 그 깊이를 알 수 없지만 정말 수고 했어</p>
+	
+	<a href="#" class="a1 a2" id="a3" id="a4">다른페이동</a>
+	<span>테스트 용 span</span>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    padding : 20px;
+    font-family: monospace;
+}
+
+td, tr{
+    border: 1px solid #df4040;
+    padding: 10px;
+}
+
+table{
+    text-align: center;
+
+}
+
+.container tfoot{
+    background-color: skyblue;
+}
+
+.container tbody tr:hover{
+    background-color: plum;
+    color:#df4040
+}
+
+.container tbody tr{
+    cursor: pointer;
+}
