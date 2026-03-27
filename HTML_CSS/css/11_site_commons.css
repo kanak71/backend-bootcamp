@@ -1,0 +1,275 @@
+/* ==== 공통 css 990이상에서 동작 ====*/
+
+/* Jeju Gothic */
+@import url('https://fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+/* 모든 요소 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 바디 설정 */
+body{
+    background-color: #fff;
+    font-family: 'Jeju Gothic', serif;
+}
+
+#container{
+    width: 995px;
+    margin: 0px auto;
+    border: 2px solid #d4d4d4;
+}
+
+/* GNB 글로벌 네비게이션 바 */
+nav{
+    background: #000;
+}
+
+/* 네비게이션 링크 색상 */
+nav a:link, nav a:visited{
+    color: white;
+
+}
+
+/* 네비게이션 링크 클릭된 링크의 색상 */
+nav a:active{
+    color:yellow;
+}
+
+/* ----------공통 요소 설정---------- */
+/* 리스트 스타일 초기화 및 폰트 크기 */
+li{
+    font-size: 1em;
+    list-style: square;
+}
+
+/* 제목 스타일 */
+h1{
+    font-size: 1.8em;
+}
+
+h2{
+    font-size: 1.3em;
+}
+
+/* 본문 텍스트 스타일 */
+p{
+    font-size: 1.3em;
+    line-height: 2;
+}
+
+/* section의 높이 유지 */
+#roadmap{
+    position: relative;
+}
+
+/* content 영역 */
+section .content{
+    overflow: hidden;
+}
+
+/* 이미지 크기 */
+
+.photo_img{
+    width: 200px;
+    max-width: 320px;
+    height: auto;
+}
+
+#intro .photo, #coffee .photo{
+    float: left;
+    width: 40%;
+}
+
+#roadmap .photo{
+    float: right;
+    width: 40%;
+}
+
+/* 텍스트 오른쪽 */
+#intro .text, #coffee .text{
+    float: right;
+    width: 40%;
+}
+
+#roadmap .photo{
+    float :right;
+    width: 40%;
+}
+
+/* 헤더 설정 */
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    background: url("https://placehold.co/800x100") no-repeat center center / cover;
+
+    height: 200px;
+
+}
+
+.header-container{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    background-color: black;
+    justify-content: space-between;
+}
+
+/* 로고 이미지 스타일 */
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+/* 네비게이션 리스트 스타일 초기화 */
+#main-nav{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+/* 네비게이션 항목 스타일 */
+#main-nav li{
+    display: inline-block;
+    color: white;
+    font-family: "맑은 고딕", 돋움, sans-serif;
+    font-size: 0.8em;
+    margin: 5px 15px;
+
+}
+
+/* ----------section 설정----------- */
+/* 섹션 기본 스타일 */
+section{
+    position: relative;
+    padding: 15px 5%;
+
+}
+
+/* 짝수 selection의 배경색상 변경 */
+#container section:nth-child(odd){
+    background-color: #eee;
+
+}
+
+/* 페이지 제목 스타일 */
+.page-title{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    padding: 30px 50px;
+}
+
+.page-title h1{
+    margin-top: 30px;
+}
+
+/* content 박스 스타일 */
+.content{
+    margin: 80px auto 10px;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 푸터 설정 */
+footer{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    clear: both;
+
+}
+
+footer p{
+    font-family: 'Jeju Gothic', cursive;
+    font-size: 1.5em;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) and (min-width: 760px) {
+    body{
+        font-size: 70%;
+    }
+
+    #container{
+        width: 800px;
+        margin: 0px auto;
+        border: 2px solid #d4d4d4;
+    }
+
+    .photo{
+        display: none;
+    }
+
+    section{
+        box-sizing: border-box;
+        height: 200px;
+        border: 1px solid #d4d4d4;
+    }
+
+    .content{
+        padding: 0px;
+    }
+
+    #container section:nth-child(odd){
+        background-color: white;
+    }
+
+    #intro .text, #roadmap .text,  #coffee .text{
+        float: none;
+        width: 100%;
+    }
+
+    #intro, #roadmap{
+        float: left;
+        width: 50%;
+    }
+
+    #coffee{
+        clear: both;
+        text-align: center;
+    }
+
+    #coffee ol{
+        display: inline-block;
+    }
+    #coffee li{
+        list-style: none;
+    }
+
+}
+
+@media screen and (max-width: 759px) {
+
+    body{
+        font-size: 60%;
+    }
+
+    #container{
+        width: 650px;
+        margin: 0px auto;
+        border: 2px solid #d4d4d4;
+    }
+
+    header{
+        background: none;
+        height: 50px;
+
+    }
+    .photo{
+        display: none;
+    }
+
+    #intro .text, #roadmap .text, #coffee .text{
+        float: none;
+        width: 100%;
+    }
+
+
+}

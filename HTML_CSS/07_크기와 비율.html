@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        /* 현재 document의 tag속성을 지우고 작업하겠다. ex) p 속성 모두 지우겠다 */
+        *{
+            margin:0;
+            padding: 0;
+        }
+        
+        body{
+            /* 색선택 : 16진수 표기법 #00000, rgb(255, 255, 255), red */
+            /* color: olive; */
+            /* color: rgb(128, 128, 0); */
+            color: #808000;
+        }
+        /* 
+            px(픽셀) : 고정된 크기로 정확한 크기 조정이 가능하다. 하지만 유동성이 없다
+
+            em : 부모의 요소의 폰트 크기를 기준으로 상대적인 크기 조정
+            rem(Root em): 루트 요소의 폰트 크기를 기준으로 상대적인 크기 조정, 일관성을 유지
+            % : 부모 요소 폰트 크기 기준으로 상대적 크기, 유동적인 디자인에 유용
+
+            vw(viewport width) : 화면의 너비를 백분율로 크기를 조정, 반응형 디사인에 적합
+            vh(viewport height) : 화면의 높이를 백분율로 크기를 조정, 반응형 디사인에 적합
+
+
+        */
+        h2{
+            /* margin-top: 20px; */
+            /* margin-top: 20%; */
+            margin-top: 20em;
+        }
+
+        p{
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+    <div>날씨가 흐림입니다</div>
+    <h2>오늘 점심 메뉴는 무엇인가요</h2>
+    <p>
+        <b>답변&gt;</b> 쭈삼먹어요
+    </p>
+    
+</body>
+</html>

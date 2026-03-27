@@ -1,0 +1,117 @@
+@media screen and (max-width: 700px) {
+    body{
+        font: small;
+        font-family: sans-serif, serif;
+        width: 500px;
+        margin: auto;
+        border: 4px double green;
+        padding: 5px;
+    }
+
+    /* 
+        css 선택자 특정 태그 바로 하위에 있는 태그를 선택 tag>tag
+    */
+
+    p>img{  /*헤더로고*/
+        width : 100%;
+    }
+
+    /* 
+        tag, tag 두 개의 tag 모두 적용
+        tag{} tag[]
+    */
+    h1, h2{
+        color:green;
+    }
+
+    /* 
+        em을 통한 폰트크키 조정 1.5em -> 150%
+    */
+    h1{
+        font-size: 150%;
+    }
+    h2{
+        font-size: 130%;
+    }
+
+    #footer{
+        font-size: 50%;
+        text-align: center;
+        line-height: 0.5em;
+        margin-top: 50px;
+        color: #900000;
+        clear: both; /* 침범 영역을 제외한다 */
+    }
+
+    .ex{
+        font-family: cursive;
+    }
+
+    .edu{
+        font-weight: bold;
+    }
+
+    /* 
+        <a> tag 속성은 모두 지우고 none으로 하면 _처리가 사라짐
+        속성중에 한번이라도 클릭을 하면 보라색 : visited
+    */
+
+    a{
+        text-decoration: none;
+    }
+    a:visited{
+        color: #500000;
+    }
+    a:link{
+        color: orange;
+    }
+
+    #gurantee{
+        border: 1px solid #ffffff;
+        background-color: #dfdfdf;
+        padding: 25px 25px 25px 35px;
+        margin : 30px;
+        /* margin-right: 220px; */
+
+        /* 상대경로 */
+        background-image: url("../img/dm/stamp.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    #animal{
+        /* 안보이는건 none 보이게 하는건 block */
+        display: none;
+
+    }
+
+    #animal h2{
+        text-shadow: #FC0 1px 0px 10px;
+    }
+
+    /* 기본 그림자 + 퍼지는 빛 + 선명한 빛 */
+    /* 
+        text-shadow: x축, y축, blur범위, 색상
+        text-shadow: 1px 1px 2px black
+        오른쪽 1 아래쪽 1 블러 2 검정색
+    */
+    #animal h3{
+        text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue; 
+        color: white;
+        font: 1.3em, Georgia, serif;
+    }
+
+    #animal a:visited{
+        color : teal;
+    }
+    #animal a:link{
+        background-color: yellow;
+        color :orange;
+    }
+
+    #animal a:hover{
+        background-color: tomato;
+        color : white;
+        border: 1px dotted lightblue;
+    }
+}

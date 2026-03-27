@@ -1,0 +1,55 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    margin: 0px;
+}
+
+#allContent{
+    position: relative;
+    width: 820px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkgray;
+    margin: 0px auto;
+}
+
+#header{
+    background-color: #a8cbea;
+    margin : 10px;
+    height: 110px;
+}
+
+#header img{
+    width: 100%; /* 가로 꽉 채우기*/
+    display: block; /*inline공백 제거*/
+    object-fit: fill; /**/
+}
+
+/* 메인 콘텐츠의 영역에 색을 넣고 안에 공간을 만든다 */
+#main, #sidebar{
+    background-color: antiquewhite;
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+}
+
+#footer{
+    background-color: cadetblue;
+    color: antiquewhite;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    font-size: 90%;
+}
+
+.heading{
+    text-align: center;
+    line-height: 1.8em;
+
+}
+
+.slogan{
+    color: brown;
+}
+

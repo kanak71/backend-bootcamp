@@ -1,0 +1,99 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    margin: 0px;
+}
+
+#allContent{
+    position: relative;
+    width: 820px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkgray;
+    margin: 0px auto;
+}
+
+#header{
+    background-color: #a8cbea;
+    margin : 10px;
+    height: 110px;
+}
+
+#header img{
+    width: 100%; /* 가로 꽉 채우기*/
+    display: block; /*inline공백 제거*/
+    object-fit: fill; /**/
+}
+
+/* 메인 콘텐츠의 영역에 색을 넣고 안에 공간을 만든다 */
+#main{
+    background-color: antiquewhite;
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+
+    /* 
+        TODO 002 main 배경이 float에 뒤에 있기 때문에 영역을 잡아서 처리 해줌
+    */
+    margin: 0px 330px 10px 10px;
+
+    /*
+        TODO 004
+        #main을 주가 되는 내용을 만들 float처리
+        #sidebar main 밑으로 이동
+    */
+
+    margin: 0px 10px 10px 10px;
+    width: 420px;
+    float: left;
+}
+
+#sidebar{
+    background-color: antiquewhite;
+    font-size: 105%;
+    padding: 15px;
+    margin: 0px 10px 10px 10px;
+
+    position: absolute;
+    width: 280px;
+    top: 140px;
+    right: 10px
+
+    /*
+    TODO 001
+    sidebar 크기를 작성하고 float으로 작업
+    header>sidebar>main 변경해 줘야 한다
+    */
+
+    /* width: 280px;
+    float: right;
+    margin: 0px 10px 10px 470px; */
+}
+
+#footer{
+    background-color: cadetblue;
+    color: antiquewhite;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    font-size: 90%;
+
+    /*
+    TODO 003 
+    #sidebar 와 #main이 두개가 영역 걸쳐 있다
+    겹치지 않도록 #footer의 영역을 #sidebar와 #main을 clear
+    */
+    clear: both;
+}
+
+.heading{
+    text-align: center;
+    line-height: 1.8em;
+
+}
+
+.slogan{
+    color: brown;
+}
+
