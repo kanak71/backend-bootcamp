@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript의 함수 사용</title>
+    <script type="text/javascript" src="./js/js_004.js" defer="defer"></script>
+</head>
+<body>
+    <h1>함수의 종류</h1>
+    <p onclick="function01()">1. 명시적 함수</p>
+    <p onclick="function02()">2. 익명적 함수</p>
+    <p onclick="function03()">3. 함수 리터럴(함수도 값이 될 수 있다)</p>
+
+
+    <hr>
+
+    <fieldset>
+        <legend>for문을 사용한 검색된 결과 출력</legend>
+        <pre>   <!--tag를 인식하고 화면에 출력-->
+            1. 현재 HTML에서 p tag를 검색
+            2. 탐색된 p Element의 content
+            3. 향상된 for in과 of로 탐색해 본다
+
+        </pre>
+        <button onclick="pPrint()">p Element 탐색</button>
+    </fieldset>
+
+    <hr>
+    <!--함수 리터럴의 제어 : 시계 출력-->
+    <!--interval 함수 interval(함수, 반복시간(밀리세컨드))
+        clearInterval(함수) => setInterval의 함수 멈춰    
+    -->
+
+    <fieldset>
+        <legend>현재시간</legend>
+        <span>
+            <button onclick="stopClock()">시계 멈춤</button>
+            <button onclick="startClock()">시계 시작</button>
+        </span>
+        <div id="clock"></div>
+    </fieldset>
+
+    <!--클로져(함수 리턴)-->
+    <label>오전수업</label>
+    <input type="text" id="am">
+    <input type="button" value="오전" onclick="amEdu(this.value)">
+
+    <label>오후수업</label>
+    <input type="text" id="p">
+    <input type="button" value="오후" onclick="pmEdu(this.value)">
+
+    <button onclick="closureTest()">클로저 함수</button>
+
+</body>
+</html>

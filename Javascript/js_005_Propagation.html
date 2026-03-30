@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전파방지(Propagation)</title>
+    <script type="text/javascript" src="./js/js_005.js"></script>
+    <style rel="stylesheet">
+        a{
+            text-decoration: none;
+        }
+
+        img{
+            vertical-align: middle;
+        }
+
+        a>img{
+            width: 50px;
+            height: auto;
+        }
+
+        div#propagation{
+            width: 600px;
+            margin: 100px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        a tag는 화면의 흐름제어하기 위해서 사용하는 tag
+        누르면 href의 주소로 화면을 이동시킨다
+    -->
+    <div id="propagation">
+    <p>
+        <a href="http://www.naver.com" onclick="return preGallary()">
+            <img alt="left" src="./img/left_icon.png">
+        </a>
+
+        <img alt="포켓몬진화" id="gallary" src="./img/1.png">
+
+        <a href="http://www.naver.com" onclick="return nextGallary()">
+            <img alt="right" src="./img/right_icon.png">
+        </a>
+    </p>
+    </div>
+
+    <hr>
+
+    <!--로그인과 같은 값을 전송할 때 필요한 값이 입력되어 있지 않으면 서버로 값을 전송(submit)하지 않아야 한다-->
+    <form action="./submit/do" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="전송할 값 입력">
+        <input type="submit" value="서버전송">
+
+    </form>
+
+    <hr>
+    <div id="parent">
+        <button id="child">부모에 속해 있는 자식 이벤트</button>
+        <button onclick="childFn(event)">onclick 부모에 속해 있는 자식 이벤트</button>
+    </div>
+
+    <hr>
+
+    <img ondragstart="handleDragstart(event)" src="https://pasteve.com/wp-content/uploads/%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%EC%9D%98-%EC%9C%A0%EB%9E%98%EC%99%80-%EC%97%AD%EC%82%AC.webp">
+    
+    <hr>
+    <div onclick="clickEvent()">속성 이벤트 클릭을 눌러보세요</div>
+    <div id="onload">클릭을 눌러보세요</div>
+    <div id="eventListener">EventListener 클릭을 눌러보세요</div>
+
+</body>
+
+<script type="text/javascript">
+    //화면의 DOM탐색을 통해서 TAG에 이벤트를 추가 : addEventListner
+    document.getElementById("eventListener").addEventListener("click", () =>{console.log("addEventListener 이벤트 작성")});
+
+
+
+    //부모 Div parent에 이벤트 리스너를 추가
+    document.getElementById("parent").addEventListener("click", function(){
+        alert("parent 이벤트 발생")
+    });
+    //자식 div child에 이벤트 리스너를 추가
+    document.getElementById("child").addEventListener("click", function(e){
+        alert("child 이벤트 실행");
+        //e.stopPropagation();    //이벤트가 부모로 전파되지 않음(부모 alert는 실행 안됨)
+    });
+
+    //해당 객체에서 event를 받아와서 모든 event를 처리 할 수 있다
+    function childFn(event){    
+        alert("onclick 자식 클릭 이벤트");
+        //event.stopPropagation();
+    }
+
+
+    //값을 전달 할 때 form을 통해서 전달하게 되고, 전달 방법은 submit()을 통해서 서버로 값을 전달
+    //근데, 값(form 요소 - input)의 값을 유효성 검사(값 유뮤"", 정확한 regex.. 등을 확인)하고 전달 해야 한다 => 수동으로 값을 전달
+    //위에는 on*** 이라고 하는 event이다. 하지만 지금 기본 속성(HTML)의 이벤트 => event.preventDefault()로 사용한다
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        //DOM 탐색을 통해서 값을 확인 하고 submit();
+    }
+
+    function handleDragstart(event){
+        event.preventDefault();
+    }   //이미지 끌어도 동작 x
+
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 탐색과 선택자</title>
+    <script type="text/javascript" src="./js/js_006.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>쿼리셀렉터(Query Selector)</legend>
+        <p onclick ="searchQS()" id="querySelector">
+            쿼리셀렉터는 CSS에서 사용했던 #id, .class tag를 사용하고 Node 또는 NodeList로 탐색
+        </p>
+    </fieldset>
+    <!--CSS일 때는 ID가 화면에 여러개 있으면 적용이 된다
+        DOM 탐색이 되었을 때는 처음에 나오는 ID 한개만 탐색된다
+    -->
+    <fieldset>
+        <legend>ID를 통한 검색</legend>
+        <p onclick="searchId()" id="testId">Element를 ID를 통해서 검색</p>
+        <p id="testId">같은 ID가 여러개 있더라고 첫번째 한개만 검색된다</p>
+    </fieldset>
+
+    <hr>
+    <fieldset>
+        <!--
+            왜 NAME 이죠?
+            여러개를 선택 class, tag도 있지만
+            기능상 화면에서 여러개를 체크한다는 것은 서버에 값을 전송 => 반드시 name을 통해서만 값이 전송이 된다
+             ㄴ form요소의 name을 통해서 서버에 값을 {key:value}
+                public void make(String str){}
+                make("안녕");
+
+                String str = "안녕"; => Map형태로 변경 => {"str":"안녕"}
+        -->
+
+            <legend>Name 속성을 통한 검색</legend>
+            <p>
+                같은 name은 여러개(nodeList) 형태로 처리한다 => for문(index, in, of)
+            </p> 
+            <div>
+                <table border="1">
+                    <col style="width: 300px;">
+                    <col style="width: 300px;">
+                    <col style="width: 300px;">
+
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="allCheck" onclick="checkAll(this.checked)">
+                            </th>
+                            <th>제목</th>
+                            <th>내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="chk"></td>
+                            <td>오늘날씨</td>
+                            <td>맑음</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chk"></td>
+                            <td>내일날씨</td>
+                            <td>모름</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chk"></td>
+                            <td>크리스마스</td>
+                            <td>코카콜라</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+        <legend>TagName을 통한 검색</legend>
+        <button onclick="tagNameSearch()">fieldset TAG를 변경한다</button>
+    </fieldset>
+</body>
+</html>

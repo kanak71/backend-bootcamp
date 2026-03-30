@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 실행순서</title>
+    <script type="text/javascript">
+        alert("임베디드 alert 1");
+        document.addEventListener("DOMContentLoaded" , function(){
+            alert("첫번째 Embeded의 onload 이벤트");
+        });
+    </script>
+
+    <script type="text/javascript" src="./js/js_002.js" defer="defer"></script>
+
+    <script type="text/javascript">
+        alert("임베디드 body위에 선언 alert 3");
+
+        // 화면이 렌더링 되어 있지 않은 상태에서 탐색을 했을 경우
+        var sample = document.getElementById("sample");
+        console.log("body위에 선언된 sample의 value 호출", sample.value);
+
+    </script>
+</head>
+<body>
+    <h2>자바스크립트의 실행 순서와 defer의 이해</h2>
+    <ul>
+        <li>1. defer 속성</li>
+        <li>2. body tag 마지막에 사용하면 화면이 모두 렌더링 된 후 사용된다</li>
+
+        <input type="text" id="sample" value="spring"> <!-- form 요소 값을 입력되고 서버에 값을 전송하는 영역 -->
+
+        <div id="div-click">눌러보세요</div>
+
+    </ul>
+</body>
+
+<script type="text/javascript">
+    alert("body 밑에 작성 alert 4");
+
+    //화면이 모두 렌더링 된 후에 탐색했을 경우
+    var sample = document.getElementById("sample");
+    console.log("body아래에 선언된 sample의 value 호출", sample.value);
+</script>
+</html>
