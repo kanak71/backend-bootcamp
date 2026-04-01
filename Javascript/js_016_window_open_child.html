@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창 만들기(자식)</title>
+</head>
+
+<script type="text/javascript">
+    //부모의 document의 값을 탐색해서 가져온다
+    window.onload = function(){
+        var parentValue = open.document.getElementById("delivery").textContent;
+        document.getElementById("sendValue").value = parentValue;
+    }
+</script>
+<body>
+
+
+    <!--
+        현재 자신이 보고 있는 HTML은 document
+        child에서 부모의 HTML은 opener.document
+
+    -->
+
+    <input type="text" name="sendValue" id="sendValue">
+    <input type="button" value="부모에게 값 전달" onclick="sendParent()">
+    <button onclick="javascript:self.close()">창닫기</button>
+
+    <script type="text/javascript">
+
+        function sendParent(){
+            var msg = document.getElementById("sendValue").value;
+            opener.document.getElementById("delivery").textContent = msg;
+            if(confirm("창을 닫을까요?")){
+                self.close();
+            }
+        }
+    </script>
+    
+</body>
+</html>

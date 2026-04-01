@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS에 translate</title>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            border-radius: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin: 20px;
+            transition: 1s transform;   /*애니메이션 효과*/
+
+        }
+
+        .box:hover{
+            transform: translate(50px, 50px);
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!--transform과 translate-->
+    <div class ="box">변경</div>
+    <hr>
+    <div id="box"></div>
+</body>
+<!--
+    화면이 로드 되고 실행이 될 수 있도록 하는 방법
+    1) 화면에 가장 하단에 작성한다
+    2) defer를 사용한다
+    3) window.onload를 사용한다
+-->
+<script type="text/javascript">
+    window.onload = function(){
+        const box = document.getElementById("box");
+        for(let i=0; i<10; i++){
+            const ball = document.createElement("div"); //<div></div>
+            ball.className = "box";
+            box.appendChild(ball)
+        }
+    }
+
+</script>
+
+</html>

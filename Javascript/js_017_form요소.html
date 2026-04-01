@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 요소</title>
+    <script type="text/javascript" src="./js/js_017.js"></script>
+</head>
+<body>
+    <!--
+        ** XML(eXtensible Markup Language) => 규칙 HTML(Hyper Text Markup Language)
+        DTD의 문법에 의해서 작성하고 Browser에 전송하면 
+        문서의 DOCTYPE에 의해서 번역하여 보여줌
+
+        ** Server(IP, Port)에 값을 전송할 수 있는 것(form)
+            ㄴ 전송하는 방식 Protocol
+                ㄴ HTTP 1.1
+                    ㄴ GET, POST, DELETE, PUT, TRACE, PATCH
+
+        -----------------
+        값을 전송하기 위해서는 HTML의 input에 작성해서 submit를 통해서 전송
+
+        <input>은 <form></form> 사이에 있어야 한다
+        <form> 속성중에 action="서버의 요청 주소"의 값을 통해서 해당 서버에 값을 전송하게 된다
+
+        **HTML과 XML의 차이점
+        - HTML은 DTD에 의해서 well-formed 하기만 하면 된다. (순서에 상관 없이 구성 열고 닫음 tag만 잘 하면 된다)
+        - XML은 DTD에 의해서 well-formed 하면서 valid 해야 한다(순서가 있고, 열고 닫음도 잘 해야 한다)
+
+    -->
+
+    <fieldset>
+        <legend>네이버 호출</legend>
+        <div>
+            <ul>
+                <li>
+                    a tag와 location 방식은 모두 다 GET방식을 사용하고 있다
+                    <a href="https://search.naver.com/search.naver?query=날씨">네이버 날씨 GET 요청</a> 
+                </li>
+                <li>
+                    form방식<br>
+                    <form action="https://search.naver.com/search.naver" method="get">
+                        <input type="text" name="query">
+                        <input type="submit" value="전송">
+                        <input type="reset" value="초기화">
+
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+        <legend>테스트 WAS를 사용하여 form 요소 전송 연습</legend>
+        <form action="http://localhost:8080/web00_form_server/formServlet.servlet" method="get">
+            <input type="submit" value="전송">
+
+            <div>커피주문</div>
+            <select name="coffee">
+                <option value="coffee01">케냐</option>
+                <option value="coffee02">아라비카</option>
+                <option value="coffee03">과테말라</option>
+            </select>
+            <div>
+                <label>유형</label>
+                <p>
+                    <!--radio 같은 name 끼리 묶음으로 선택되고, 여러개중 한개만 선택 되도록 한다-->
+                    <input type="radio" name="beanType" value="TypeA">더탄거<br>
+                    <input type="radio" name="beanType" value="TypeB">탄거<br>
+                    <input type="radio" name="beanType" value="TypeC">생거<br>
+                </p>
+            </div>
+
+            <div>
+                <label>숫자</label>
+                <input type="number" name="bags" min="1" max="4">
+            </div>
+
+            <div>
+                <label>포장</label>
+                <input type="checkbox" name="extra" value="none">포장안함<br>
+                <input type="checkbox" name="extra" value="bag">가방<br>
+                <input type="checkbox" name="extra" value="box">박스<br>
+            </div>
+
+            <div>
+                <input type="color" name="color">
+                <input type="tel">
+                <input type="password">
+            </div>
+        </form>
+    </fieldset>
+
+    <hr>
+
+    <div>
+        <label>요구사항</label>
+        <!-- javascript를 통해서 submit을 제어한다-->
+         <form action="https://www.naver.com" id="frm" name="frm">
+            <!-- markup으로 구성이 되어있으나. *** value를 통해서 값을 전달하고 확인해야 한다-->
+             <!-- textarea는 절대 <textarea>/<textarea> 엔터치지 마세요-->
+            <textarea name="content" id="txt" rows="5" cols="60" maxlength="60"></textarea>
+         </form>
+
+         <!--submit은 form 안에서 동작이 된다. 따라서 DOM 탐색을 통해서 submit() 실행시켜 줘야 한다-->
+         <button type="submit">전송버튼</button>
+         <button onclick="txtArea()">내용전송(외부)</button>
+    </div>
+
+    <div id="view">
+
+        
+    </div>
+
+
+</body>
+</html>

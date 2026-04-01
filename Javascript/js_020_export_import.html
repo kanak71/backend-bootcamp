@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>module의 함수 사용</legend>
+        <div>
+            <button id="module01">이름/나이 전송</button>
+        </div>
+    </fieldset>
+
+    <!--js_020_main.js를 module로 가져와 사용-->
+    <!-- <script type="module" src="./js/js_020_main.js"></script> -->
+
+    <!--embeded를 통한 module-->
+    <script type="module">
+        import { message, name, age, insa } from './js/js_020_default.js';
+        document.getElementById("module01").addEventListener("click",function(){
+            //name과 age 변수 설정
+            let name = "한국인";
+            let age = "100";
+
+        });
+
+        console.log(`${name}, ${age}`);
+
+        let g = new insa('홍길동');
+        console.log(g.greeting);
+    </script>
+</body>
+</html>

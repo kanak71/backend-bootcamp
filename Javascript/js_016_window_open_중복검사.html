@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 중복 검사창</title>
+    <!--AJAX를 통해서 처리 해야 합니다-->
+    <script type="text/javascript">
+        const ids = ["스위스","토마토","기러기","역삼역"];
+        function chkConfirm(){
+            var id = document.getElementById("id").value;
+            var msg = document.getElementsByTagName("div")[0];
+
+            if(ids.indexOf(id) != -1){
+                msg.innerHTML = '<font style="color: red; font-weight: bold;">아이디가 존재합니다</font>';
+            } else{
+                //동적으로 button 만들어 준다
+                //display로 만들게 되면 화면에 코드가 노출된다.
+                msg.innerHTML = '<font style="color: blue; font-weight: bold;">사용할 수 있는 아이디 입니다</font>' +
+                    '<input type="button" value="아이디 사용" onclick="useId(\''+id+'\')">';
+            }
+        }
+
+        function useId(val){
+            opener.document.getElementById("id").value = val;
+            //** 원래 탐색되어 있는 곳의 onclick이벤트를 삭제 해줘야한다
+            //removeAttribute("onclick")를 해줘야 한다.
+            opener.document.getElementById("id").removeAttribute("onclick");
+            self.close();
+        }
+
+    </script>
+</head>
+<body>
+    <table border="1" style="width:400px; margin: auto">
+        <tr>
+            <th>아이디</th>
+            <td>
+                <input type="text" id="id">
+                <div>
+                    
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="중복확인" onclick="chkConfirm()">
+                <input type="button" value="취소" onclick="self.close()">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html> 
