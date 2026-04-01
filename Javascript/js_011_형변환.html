@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환</title>
+    <script type="text/javascript" src="./js/js_011.js"></script>
+
+</head>
+<body>
+    <div>
+        <h1>1. 숫자형변환 Number(), parseInt(), parseFloat()</h1>
+            <p>문자형 숫자를 number 타입으로 변환할 때 사용</p>
+            <input type="number" id="num">
+            <button onclick="numTest()">숫자변환</button>
+        
+    </div>
+
+    <div>
+        <h1>2. 정수형변환 parseInt()</h1>
+            <p>무조건 숫자로 변경하고, 정수로만 변환, NaN</p>
+            <input type="text" id="textNum">
+            <button onclick="textNum()">정수로 변환</button>
+        
+    </div>
+
+    <div>
+        <h1>3. 실수형변환 parseFloat()</h1>
+            <p>문자형 실수를 실수형으로 변환</p>
+            <input type="text" id="textFloat">
+            <button onclick="textFloat()">실수로 변환</button>
+        
+    </div>
+    <hr>
+
+    <div>
+        <h1>검증함수 eval</h1>
+        <p>문자열로 되어 있는 연산자 코드를 읽어서 연산을 처리</p>
+        <input type="text" name="evalValue" placeholder="예시> 1+2">
+        <button onclick="calculation()">계산기</button>
+        <fieldset>
+            <legend>계산결과</legend>
+            <div id="showCal"></div>
+            <div id="resultCal"></div>
+        </fieldset>
+    </div>
+    
+</body>
+</html>

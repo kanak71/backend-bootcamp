@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/js_008.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Number 객체</legend>
+        <h2>자바스크립트에서 제공하는 기본 객체</h2>
+        <ol>
+            <li>
+                숫자(정수, 실수)의 객체
+                <button onclick="numberFeature()">Number 객체의 특징</button>
+            </li>
+
+            <li>
+                NaN 숫자가 아닌 값을 표현
+            </li>
+
+            <li>
+                infinity는 javascript에서 표현할 수 있는 숫자값의 크기를 넘어갔을 때
+            </li>
+
+            <li>
+                undifinded 선언만 되어 있고 값을 정의(입력)가 되어 있지 않을 때 = 동적변수
+                ***DOM탐색으로 되어진 객체는 undifinded가 될 수 없다
+            </li>
+
+            <li>
+                DOM 탐색을 했을 경우 Node의 결과
+            </li>
+
+            <li>
+                <input type="text" min="0" max="10" id="numValue" placeholder="숫자만 입력">
+                <button onclick="isNumber()">숫자판별</button>
+            </li>
+
+            <li>
+                <input type="text" id="textValue">
+                <button onclick="isRegEx()">RegEx(정규화표현식) 숫자판별</button>
+            </li>
+        </ol>
+    </fieldset>
+    
+</body>
+</html>

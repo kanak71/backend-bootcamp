@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <script type="text/javascript" src ="./js/js_계산기.js"></script>
+</head>
+<body>
+
+    <fieldset>
+        <legend>계산 결과</legend>
+        <input type="text" id="result1">
+        <button onclick="clear()">c</button>
+        <button onclick="oneClear()">한글자지우기</button>
+    </fieldset>
+
+
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><button onclick="press(7)">7</button></td>
+                    <td><button onclick="press(8)">8</button></td>
+                    <td><button onclick="press(9)">9</button></td>
+                    <td><button onclick="press('/')">나누기</button></td>
+                </tr>
+       
+                <tr>
+                    <td><button onclick="press(4)">4</button></td>
+                    <td><button onclick="press(5)">5</button></td>
+                    <td><button onclick="press(6)">6</button></td>
+                    <td><button onclick="press('*')">x</button></td>
+                </tr>
+       
+                <tr>
+                    <td><button onclick="press(1)">1</button></td>
+                    <td><button onclick="press(2)">2</button></td>
+                    <td><button onclick="press(3)">3</button></td>
+                    <td><button onclick="press('-')">-</button></td>
+                </tr>
+    
+                <tr>
+                    <td><button onclick="calculation()">=</button></td>
+                    <td><button onclick="press(0)">0</button></td>
+                    <td><button onclick="press('.')">.</button></td>
+                    <td><button onclick="press('+')">+</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+</body>
+</html>

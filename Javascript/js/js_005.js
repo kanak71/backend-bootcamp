@@ -7,9 +7,6 @@
     **** 3) 1)번과 2)번을 동시에 막는 방법은 return false
  */
 
-function clickEvent(){
-    console.log("속성 이벤트 클릭");
-}
 
 var num = 1;
 function preGallary(){
