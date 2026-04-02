@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM을 이용한 실시간 테이블 변경</title>
+    <script type="text/javascript" src = "./js/js_027.js"></script>
+</head>
+<body>
+    <form name="frm">
+        <div>버튼 이벤트</div>
+        <table border ="1">
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="id"></td>
+            </tr>
+
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="pw"></td>
+            </tr>
+
+            <tr>
+                <th>주소</th>
+                <td><input type="text" name="address"></td>
+            </tr>
+
+            <tr>
+                <th>전화번호</th>
+                <td><input type="text" name="phone"></td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="추가" onclick="tableInput()">
+                    <input type="button" value="삭제" onclick="deleteTable()">
+
+                </th>
+                <td></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <div id="addTable">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>비밀번호</th>
+                        <th>주소</th>
+                        <th>전화번호</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody id="arrd"></tbody>
+            </table>
+        </div>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM을 이용한 ELement 추가 이동 insert</title>
+    <script type="text/javascript" src="./js/js_026.js"></script>
+</head>
+<body>
+    <h2>태그 추가하기</h2>
+    <button onclick="childAppend()">뒤에 추가하기 : appendChild()</button>
+    <button onclick="beforeInsert()">특정 위치 추가하기 : insertBefore()</button>
+    <button onclick="moveElement()">이동 : appendChild를 통해서 Element 이동</button>
+
+    <fieldset id="addElement">
+        <legend>부모태그</legend>
+        <div>DIV태그</div>
+    </fieldset>
+
+    <hr>
+
+    <h3>문제 1 : id가 text01인 tag에 "DOM TEST"란 콘텐츠를 가지고 있는 div를 추가</h3>
+    <button onclick="addTest()">문제1 정답</button>
+
+    <h3>문제2 : id가 text01에 추가된 DIV 태그를 id가 text02인 영역으로 이동시키세요</h3>
+    <button onclick="moveTest()">문제2 정답</button>
+    *test01
+    <div id="text01"></div>
+    *test02
+    <div id="text02"></div>
+</body>
+</html>
