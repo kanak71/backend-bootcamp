@@ -1,0 +1,113 @@
+.payment-modal {
+  min-width: 400px;
+}
+
+.purchase-summary {
+  padding: 1.5rem;
+  background-color: var(--light-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.purchase-summary h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.price-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.payment-methods h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.method-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.method-option:hover {
+  border-color: var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.method-option.active {
+  border-color: var(--primary-color);
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.method-option input[type="radio"] {
+  cursor: pointer;
+}
+
+.method-option svg {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.method-option.active svg {
+  color: var(--primary-color);
+}
+
+.method-option span {
+  flex: 1;
+  font-weight: 500;
+}
+
+.payment-notice {
+  background-color: #fef3c7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-notice p {
+  font-size: 0.75rem;
+  color: #92400e;
+  margin-bottom: 0.25rem;
+}
+
+.payment-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.payment-actions button {
+  flex: 1;
+}

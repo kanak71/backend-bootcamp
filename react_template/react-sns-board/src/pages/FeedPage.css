@@ -1,0 +1,21 @@
+.feed-page {
+  padding: 2rem 0;
+}
+
+.feed-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feed-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-main h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
