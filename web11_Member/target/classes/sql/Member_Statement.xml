@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.min.edu.model.MemberDaoImpl">
+
+	<!-- 	로그인	 -->
+	<select id="getLogin" parameterType="java.util.Map"
+		resultType="MemberDto">
+		SELECT ID, NAME, AUTH
+		FROM MEMBER
+		WHERE ID = #{id} AND PASSWORD=#{password} AND ENABLE='Y'
+	</select>
+
+
+	<!-- 사용자 상세정보	 -->
+	<select id="getUserInfo" parameterType="java.lang.String"
+		resultType="MemberDto">
+		SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+		FROM MEMBER
+		WHERE ID=#{id}
+	</select>
+
+
+	<!-- 사용자 정보 수정	 -->
+	<update id="updateUserInfo" parameterType="MemberDto"> UPDATE MEMBER <set>
+		EMAIL = #{email}, <if test="password != null and password != ''">PASSWORD
+		= #{password}</if>
+		</set> WHERE ID = #{id} </update>
+
+	<!-- 사용자 삭제	 -->
+	<delete id="delUser" parameterType="java.lang.String">
+		UPDATE MEMBER
+		SET ENABLE = 'N'
+		WHERE ID=#{id}
+	</delete>
+
+
+	<!-- 사용자 등록	 -->
+	<insert id="insertUser" parameterType="MemberDto">
+		INSERT INTO MEMBER(ID, NAME, PASSWORD,
+		EMAIL, AUTH, ENABLE,
+		JOINDATE)
+		VALUES(#{id}, #{name}, #{password},
+		#{email}, 'ROLE_USER', 'Y' ,
+		CURRENT_DATE)
+	</insert>
+
+
+	<!-- 아이디 중복검사	 -->
+	<select id="duplidateId" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		SELECT ID
+		FROM MEMBER
+		WHERE ID=#{id}
+	</select>
+
+
+	<!-- 사용 가능 사용자 목록	 -->
+	<select id="getAllUserState" resultType="MemberDto">
+		SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+		FROM MEMBER
+		WHERE ENABLE='Y'
+	</select>
+
+	<!-- 전체 사용자 목록	 -->
+	<select id="getAllUser" resultType="MemberDto">
+		SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+		FROM MEMBER
+	</select>
+
+	<!-- 권한 변경	 -->
+	<update id="updateAuthUser" parameterType="java.util.Map">
+		UPDATE MEMBER
+		SET AUTH=#{auth}
+		WHERE ID=#{id}
+	</update>
+
+</mapper>
