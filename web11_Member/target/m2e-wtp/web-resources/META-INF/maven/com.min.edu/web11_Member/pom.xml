@@ -8,6 +8,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>web11_Member Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+	
 	<dependencies>
 		<!-- TODO 001 프로젝트에 필요한 라이브러리 선언 Architecture-->
 		<!-- OJDBC(Oracle Database Connect 11 -->

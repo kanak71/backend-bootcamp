@@ -1,0 +1,93 @@
+/* 전체 배경 */
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: linear-gradient(135deg, #fdfbfb, #ebedee);
+	padding: 40px;
+	margin: 0;
+}
+
+/* 제목 */
+h3 {
+	text-align: center;
+	margin-bottom: 25px;
+	color: #333;
+	font-size: 24px;
+}
+
+/* 테이블 전체 */
+.member-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #ffffff;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 헤더 */
+.member-table thead {
+	background: linear-gradient(135deg, #74b9ff, #a29bfe);
+	color: white;
+}
+
+.member-table th {
+	padding: 14px;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+/* 본문 */
+.member-table td {
+	padding: 12px;
+	text-align: center;
+	font-size: 14px;
+	color: #444;
+}
+
+/* 줄 구분 */
+.member-table tbody tr {
+	border-bottom: 1px solid #f1f2f6;
+}
+
+/* hover 효과 */
+.member-table tbody tr:hover {
+	background-color: #f9f9ff;
+	transition: 0.2s ease-in-out;
+}
+
+/* 짝수 줄 */
+.member-table tbody tr:nth-child(even) {
+	background-color: #fafafa;
+}
+
+/* 상태 색상 */
+.member-table td:nth-child(5) {
+	font-weight: bold;
+}
+
+.member-table td:nth-child(5) {
+	color: #2ecc71; /* 기본 초록 */
+}
+
+/* 탈퇴 텍스트 따로 색 */
+.member-table td:nth-child(5):contains("탈퇴") {
+	color: #e74c3c;
+}
+
+/* 버튼 */
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #81ecec, #74b9ff);
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	background: linear-gradient(135deg, #74b9ff, #a29bfe);
+	transform: translateY(-2px);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}

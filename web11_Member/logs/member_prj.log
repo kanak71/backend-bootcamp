@@ -1,68 +1,8 @@
-INFO  26-04-07 15:31:13[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:34:44[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:34:55[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:34:55[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:38:04[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:38:04[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:39:24[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:39:24[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 15:39:24[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:40:07[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:40:08[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:40:08[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 15:40:08[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 15:49:08[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:49:08[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 15:49:08[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 15:49:09[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 15:49:09[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 15:49:09[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 15:49:09[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 15:49:09[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 16:03:38[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 16:03:58[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:03:59[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 16:03:59[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 16:03:59[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 16:03:59[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 16:03:59[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user02
-INFO  26-04-07 16:06:06[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 16:06:35[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:06:35[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 16:06:35[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:06:35[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 16:06:36[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 16:06:36[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 16:06:36[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 16:06:36[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user02
-INFO  26-04-07 16:06:36[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 16:07:12[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 16:07:13[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user02
-INFO  26-04-07 16:07:13[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:71] - 사용자 전체 조회
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user02
-INFO  26-04-07 17:09:28[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:50] - 사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:71] - 사용자 전체 조회
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:36] - 사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:64] - 사용가능 사용자 조회
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:78] - 사용자 권한 수정 : {auth=ROLE_USER, id=user01}
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:43] - 사용자 삭제 : user02
+INFO  26-04-09 13:47:42[main] [MemberDaoImpl:57] - 중복 아이디 조회 : user03
+INFO  26-04-09 13:47:43[main] [MemberDaoImpl:29] - 사용자 상세 정보 : user01

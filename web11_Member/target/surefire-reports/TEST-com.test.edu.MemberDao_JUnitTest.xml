@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.test.edu.MemberDao_JUnitTest" time="2.078" tests="9" errors="1" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="MS949"/>
+    <property name="java.class.path" value="C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member\target\test-classes;C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member\target\classes;C:\Users\82108\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.26.0.0.0\ojdbc11-23.26.0.0.0.jar;C:\Users\82108\.m2\repository\org\mybatis\mybatis\3.5.19\mybatis-3.5.19.jar;C:\Users\82108\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\82108\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\82108\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\82108\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\82108\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar;C:\Users\82108\.m2\repository\jakarta\servlet\jsp\jstl\jakarta.servlet.jsp.jstl-api\3.0.0\jakarta.servlet.jsp.jstl-api-3.0.0.jar;C:\Users\82108\.m2\repository\jakarta\el\jakarta.el-api\5.0.0\jakarta.el-api-5.0.0.jar;C:\Users\82108\.m2\repository\org\glassfish\web\jakarta.servlet.jsp.jstl\3.0.0\jakarta.servlet.jsp.jstl-3.0.0.jar;C:\Users\82108\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\82108\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.boot.library.path" value="C:\java\jdk21.0.10_7\bin"/>
+    <property name="sun.java.command" value="C:\Users\82108\AppData\Local\Temp\surefire11179425313856448835\surefirebooter-20260409134739875_3.jar C:\Users\82108\AppData\Local\Temp\surefire11179425313856448835 2026-04-09T13-47-37_881-jvmRun1 surefire-20260409134739875_1tmp surefire_0-20260409134739875_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member\target\test-classes;C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member\target\classes;C:\Users\82108\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.26.0.0.0\ojdbc11-23.26.0.0.0.jar;C:\Users\82108\.m2\repository\org\mybatis\mybatis\3.5.19\mybatis-3.5.19.jar;C:\Users\82108\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\82108\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\82108\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\82108\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\82108\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar;C:\Users\82108\.m2\repository\jakarta\servlet\jsp\jstl\jakarta.servlet.jsp.jstl-api\3.0.0\jakarta.servlet.jsp.jstl-api-3.0.0.jar;C:\Users\82108\.m2\repository\jakarta\el\jakarta.el-api\5.0.0\jakarta.el-api-5.0.0.jar;C:\Users\82108\.m2\repository\org\glassfish\web\jakarta.servlet.jsp.jstl\3.0.0\jakarta.servlet.jsp.jstl-3.0.0.jar;C:\Users\82108\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\82108\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\82108"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\java\jdk21.0.10_7"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\82108\AppData\Local\Temp\surefire11179425313856448835\surefirebooter-20260409134739875_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.10+7-LTS"/>
+    <property name="user.name" value="82108"/>
+    <property name="stdout.encoding" value="MS949"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-21.0.10.7.1"/>
+    <property name="localRepository" value="C:\Users\82108\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-21/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\82108\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="C:\Program_Eclipse\eclipse\workspace_JSP_Servlet\web11_Member"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="MS949"/>
+    <property name="java.library.path" value="C:\java\jdk21.0.10_7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/java/jdk21.0.10_7/bin/server;C:/java/jdk21.0.10_7/bin;C:\app\82108\product\21c\dbhomeXE\bin;C:\java\jdk21.0.10_7\bin;C:\Program Files\Microsoft\jdk-17.0.15.6-hotspot\bin;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Zulu\zulu-8\bin\;C:\Program Files\Microsoft VS Code\bin;C:\Users\82108\AppData\Local\Programs\Python\Launcher\;C:\Users\82108\AppData\Local\Microsoft\WindowsApps;C:\Users\82108\.dotnet\tools;C:\Users\82108\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.13;C:\Users\82108\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.13\Scripts;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\82108\AppData\Roaming\npm;C:\Users\82108\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.4\bin;C:\Program_Eclipse\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="MS949"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="21.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="getLogin_test" classname="com.test.edu.MemberDao_JUnitTest" time="1.448">
+    <failure message="로그인 성공" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 로그인 성공
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.test.edu.MemberDao_JUnitTest.getLogin_test(MemberDao_JUnitTest.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[13:47:41,128 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+13:47:41,130 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - No custom configurators were discovered as a service.
+13:47:41,130 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+13:47:41,131 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+13:47:41,135 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+13:47:41,137 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+13:47:41,144 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 6 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+13:47:41,144 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+13:47:41,144 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+13:47:41,145 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+13:47:41,149 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Program_Eclipse/eclipse/workspace_JSP_Servlet/web11_Member/target/classes/logback.xml]
+13:47:41,246 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Registering a new ReconfigureOnChangeTask ReconfigureOnChangeTask(born:1775710061244)
+13:47:41,246 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - No 'scanPeriod' specified. Defaulting to 1 minutes
+13:47:41,246 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Will scan for changes in [file:/C:/Program_Eclipse/eclipse/workspace_JSP_Servlet/web11_Member/target/classes/logback.xml] 
+13:47:41,246 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Setting ReconfigureOnChangeTask scanning period to 1 minutes
+13:47:41,252 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+13:47:41,252 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+13:47:41,284 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+13:47:41,284 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+13:47:41,284 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+13:47:41,285 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+13:47:41,285 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+13:47:41,309 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@657381435 - No compression will be used
+13:47:41,310 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@657381435 - Will use the pattern ./logs/member_prj.%d{yyyy-MM-dd}_%i.log for the active file
+13:47:41,312 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@41fecb8b - The date pattern is 'yyyy-MM-dd' from file name pattern './logs/member_prj.%d{yyyy-MM-dd}_%i.log'.
+13:47:41,312 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@41fecb8b - Roll-over at midnight.
+13:47:41,313 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@41fecb8b - Setting initial period to 2026-04-07T08:09:28.664Z
+13:47:41,313 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@41fecb8b - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+13:47:41,313 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@41fecb8b - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+13:47:41,317 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: ./logs/member_prj.log
+13:47:41,317 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [./logs/member_prj.log]
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.mybatis] to DEBUG
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [java.sql] to DEBUG
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to DEBUG
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqltiming] to DEBUG
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to DEBUG
+13:47:41,318 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to DEBUG
+13:47:41,319 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+13:47:41,319 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+13:47:41,319 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+13:47:41,319 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@120f102b - End of configuration.
+13:47:41,319 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@625732 - Registering current configuration as safe fallback point
+13:47:41,319 |-INFO in ch.qos.logback.classic.util.ContextInitializer@732c2a62 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 175 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Created connection 338887787.
+Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@1433046b]
+==>  Preparing: SELECT ID, NAME, AUTH FROM MEMBER WHERE ID = ? AND PASSWORD=? AND ENABLE='Y'
+==> Parameters: user01(String), 1111(String)
+<==      Total: 0
+]]></system-out>
+  </testcase>
+  <testcase name="insertUser_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.121">
+    <error message="&#10;### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다&#10;&#10;https://docs.oracle.com/error-help/db/ora-00001/&#10;### The error may exist in sql/Member_Statement.xml&#10;### The error may involve com.min.edu.model.MemberDaoImpl.insertUser-Inline&#10;### The error occurred while setting parameters&#10;### SQL: INSERT INTO MEMBER(ID, NAME, PASSWORD,   EMAIL, AUTH, ENABLE,   JOINDATE)   VALUES(?, ?, ?,   ?, &apos;ROLE_USER&apos;, &apos;Y&apos; ,   CURRENT_DATE)&#10;### Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다&#10;&#10;https://docs.oracle.com/error-help/db/ora-00001/" type="org.apache.ibatis.exceptions.PersistenceException"><![CDATA[org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다
+
+https://docs.oracle.com/error-help/db/ora-00001/
+### The error may exist in sql/Member_Statement.xml
+### The error may involve com.min.edu.model.MemberDaoImpl.insertUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO MEMBER(ID, NAME, PASSWORD,   EMAIL, AUTH, ENABLE,   JOINDATE)   VALUES(?, ?, ?,   ?, 'ROLE_USER', 'Y' ,   CURRENT_DATE)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다
+
+https://docs.oracle.com/error-help/db/ora-00001/
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:199)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at com.min.edu.model.MemberDaoImpl.insertUser(MemberDaoImpl.java:52)
+	at com.test.edu.MemberDao_JUnitTest.insertUser_test(MemberDao_JUnitTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다
+
+https://docs.oracle.com/error-help/db/ora-00001/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:975)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973)
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecute(OraclePreparedStatement.java:4447)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:4433)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1032)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy12.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	... 30 more
+Caused by: Error : 1, Position : 0, SQL = INSERT INTO MEMBER(ID, NAME, PASSWORD,
+		EMAIL, AUTH, ENABLE,
+		JOINDATE)
+		VALUES(:1 , :2 , :3 ,
+		:4 , 'ROLE_USER', 'Y' ,
+		CURRENT_DATE), Original SQL = INSERT INTO MEMBER(ID, NAME, PASSWORD,
+		EMAIL, AUTH, ENABLE,
+		JOINDATE)
+		VALUES(?, ?, ?,
+		?, 'ROLE_USER', 'Y' ,
+		CURRENT_DATE), Error Message = ORA-00001: 무결성 제약 조건(EDU.SYS_C008380)에 위배됩니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723)
+	... 53 more
+]]></error>
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.498 :          c.m.e.m.MemberDaoImpl -
+				사용자 입력 : MemberDto(id=user02, name=사용자2, password=1111, email=user02@test.com, auth=null, enable=null, joindate=null)
+Opening JDBC Connection
+Created connection 515036017.
+==>  Preparing: INSERT INTO MEMBER(ID, NAME, PASSWORD, EMAIL, AUTH, ENABLE, JOINDATE) VALUES(?, ?, ?, ?, 'ROLE_USER', 'Y' , CURRENT_DATE)
+==> Parameters: user02(String), 사용자2(String), 1111(String), user02@test.com(String)
+]]></system-out>
+  </testcase>
+  <testcase name="getAllUser_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.068">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.620 :          c.m.e.m.MemberDaoImpl -
+				사용자 전체 조회
+Opening JDBC Connection
+Created connection 427226423.
+Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@1976f537]
+==>  Preparing: SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE FROM MEMBER
+==> Parameters: 
+<==    Columns: ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+<==        Row: admin, 관리자, admin@test.com, ROLE_ADMIN, Y, 2026-04-07 11:33:45
+<==        Row: user01, 홍길동, postman@example.com, ROLE_USER, N, 2026-04-07 11:35:56
+<==        Row: user03, 사용자3, user03@test.com, ROLE_USER, Y, 2026-04-08 16:06:55
+<==        Row: user02, 사용자2, user02@test.com, ROLE_USER, N, 2026-04-07 16:07:12
+<==      Total: 4
+4
+]]></system-out>
+  </testcase>
+  <testcase name="updateUserInfo_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.081">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.686 :          c.m.e.m.MemberDaoImpl -
+				사용자 정보 수정 : MemberDto(id=user01, name=null, password=1111, email=example@test.com, auth=null, enable=null, joindate=null)
+Opening JDBC Connection
+Created connection 77738832.
+==>  Preparing: UPDATE MEMBER SET EMAIL = ?, PASSWORD = ? WHERE ID = ?
+==> Parameters: example@test.com(String), 1111(String), user01(String)
+<==    Updates: 1
+]]></system-out>
+  </testcase>
+  <testcase name="getAllUserState_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.06">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.769 :          c.m.e.m.MemberDaoImpl -
+				사용가능 사용자 조회
+Opening JDBC Connection
+Created connection 1873189623.
+Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@6fa69af7]
+==>  Preparing: SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE FROM MEMBER WHERE ENABLE='Y'
+==> Parameters: 
+<==    Columns: ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+<==        Row: admin, 관리자, admin@test.com, ROLE_ADMIN, Y, 2026-04-07 11:33:45
+<==        Row: user03, 사용자3, user03@test.com, ROLE_USER, Y, 2026-04-08 16:06:55
+<==      Total: 2
+2
+]]></system-out>
+  </testcase>
+  <testcase name="updateAuthUser_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.064">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.828 :          c.m.e.m.MemberDaoImpl -
+				사용자 권한 수정 : {auth=ROLE_USER, id=user01}
+Opening JDBC Connection
+Created connection 1172450799.
+==>  Preparing: UPDATE MEMBER SET AUTH=? WHERE ID=?
+==> Parameters: ROLE_USER(String), user01(String)
+<==    Updates: 1
+]]></system-out>
+  </testcase>
+  <testcase name="delUser_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.059">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.892 :          c.m.e.m.MemberDaoImpl -
+				사용자 삭제 : user02
+Opening JDBC Connection
+Created connection 157971930.
+==>  Preparing: UPDATE MEMBER SET ENABLE = 'N' WHERE ID=?
+==> Parameters: user02(String)
+<==    Updates: 1
+]]></system-out>
+  </testcase>
+  <testcase name="duplidateId_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.064">
+    <failure message="expected null, but was:&lt;user03&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected null, but was:<user03>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.test.edu.MemberDao_JUnitTest.duplidateId_test(MemberDao_JUnitTest.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:42.952 :          c.m.e.m.MemberDaoImpl -
+				중복 아이디 조회 : user03
+Opening JDBC Connection
+Created connection 914171926.
+Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@367d2816]
+==>  Preparing: SELECT ID FROM MEMBER WHERE ID=?
+==> Parameters: user03(String)
+<==    Columns: ID
+<==        Row: user03
+<==      Total: 1
+]]></system-out>
+  </testcase>
+  <testcase name="getUserInfo_test" classname="com.test.edu.MemberDao_JUnitTest" time="0.053">
+    <system-out><![CDATA[[INFO ] 2026-04-09 13:47:43.016 :          c.m.e.m.MemberDaoImpl -
+				사용자 상세 정보 : user01
+Opening JDBC Connection
+Created connection 1092822.
+Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@10acd6]
+==>  Preparing: SELECT ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE FROM MEMBER WHERE ID=?
+==> Parameters: user01(String)
+<==    Columns: ID, NAME, EMAIL, AUTH, ENABLE, JOINDATE
+<==        Row: user01, 홍길동, example@test.com, ROLE_USER, N, 2026-04-07 11:35:56
+<==      Total: 1
+]]></system-out>
+  </testcase>
+</testsuite>
