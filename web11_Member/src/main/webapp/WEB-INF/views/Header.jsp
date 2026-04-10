@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="./css/comm.css">
 </head>
 <!-- TODO 109 모든 JSP의 GNB(Global Navigation Bar) Header -->
 <!-- 관리자 모드에서만 작성 -->
