@@ -10,6 +10,12 @@
 	<settings>
 	    <setting name="logImpl" value="STDOUT_LOGGING"/>
 	</settings>
+	
+	<typeAliases>
+		<typeAlias type ="com.min.edu.dto.AnswerboardDto" alias="AnswerboardDto"/>
+		<typeAlias type ="com.min.edu.dto.MemberDto" alias="MemberDto"/>
+
+	</typeAliases>
 
 
 	<environments default="development">
@@ -24,5 +30,9 @@
 		</environment>
 	</environments>
 	
+<mappers>
+	<mapper resource="sql/Answerboard_Statement.xml" />
+	<mapper resource="sql/User_Statement.xml"/>
+</mappers>
 
 </configuration>

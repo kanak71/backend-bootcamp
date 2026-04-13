@@ -6,6 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class AnswerboardDto {
 
 	private int seq;
@@ -18,5 +23,7 @@ public class AnswerboardDto {
 	private String regdate;
 	private String delflag;
 	private int readcount;
+	
+	private String name;
 
 }
