@@ -7,6 +7,7 @@
 <title>index 페이지</title>
 </head>
 <body>
-	<a href="./loginServlet.do">로그인 페이지 이동</a>
+	<a href="./boardList.do">게시판 전체 리스트</a><br>
+	<a href="./pagingBoard.do">페이징 처리 게시판</a>
 </body>
 </html>

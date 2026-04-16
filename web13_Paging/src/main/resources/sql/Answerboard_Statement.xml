@@ -11,71 +11,25 @@
  	ORDER BY REF DESC, STEP ASC
 </select>
 
-<!-- 상세글 조회 -->
-<select id="selectDetailBoard" resultType="AnswerboardDto">
-	SELECT a.SEQ , a.ID , a.TITLE , a.CONTENT , TO_CHAR(a.REGDATE, 'YYYY.MM.DD.') REGDATE, a.DELFLAG 
-	 FROM ANSWERBOARD a 
-	 WHERE SEQ=#{seq}
+<!-- TODO 001 페이징 처리 Mapper, Answerboard의 페이징에 따른 글 리스트 -->
+<select id="selectPagingBoard" resultType="AnswerboardDto" parameterType="java.util.Map">
+	
+	SELECT SEQ, ID, TITLE, 
+		REF, STEP, DEPTH, 
+		REGDATE, DELFLAG, NAME
+	FROM ANSWERBOARD a JOIN MEMBER m
+	USING(ID)
+	ORDER BY REF DESC, STEP ASC
+	OFFSET #{offSet} ROWS FETCH NEXT #{pageSize} ROWS ONLY
+	
 </select>
 
-<!-- 답글 insert -->
-<insert id="replyInsert">
-	INSERT INTO ANSWERBOARD (SEQ, ID, TITLE, CONTENT, 
-      REF, 
-      STEP, 
-      DEPTH)
-	 VALUES(ANSWERBOARD_SEQ.NEXTVAL, #{id}, #{title}, #{content}, 
-	   (SELECT REF FROM ANSWERBOARD a WHERE SEQ=#{seq}),
-	   (SELECT STEP FROM ANSWERBOARD a WHERE SEQ=#{seq})+1,
-	   (SELECT DEPTH FROM ANSWERBOARD A WHERE SEQ=#{seq})+1
-	   )
-</insert>
+<!-- TODO 002 게시글의 전체 글 개수 조회 -->
+<select id="selectCountBoard" resultType="java.lang.Integer">
+	SELECT COUNT(*)
+	FROM ANSWERBOARD a 
+</select>
 
-
-<!-- 답글 update -->
-<update id="replyUpdate">
-	UPDATE ANSWERBOARD a SET STEP = STEP+1
- 		WHERE REF = (SELECT REF 
-     	FROM ANSWERBOARD a2 
-     	WHERE SEQ = #{seq})
- 	AND
-  		STEP > (SELECT STEP 
-     	FROM ANSWERBOARD a2
-     	WHERE SEQ = #{seq})
-</update>
-
-<!-- 수정 -->
-<update id="modifyBoard">
-	UPDATE  ANSWERBOARD a SET CONTENT = #{content}
-	 WHERE SEQ = #{seq}
-</update>
-
-<!-- 삭제, 다중삭제 -->
-<delete id="multiDelete">
-	UPDATE ANSWERBOARD a SET DELFLAG = 'Y'
-	 WHERE SEQ IN 
-	 	<foreach collection="list" item="seq" open="(" separator="," close=")">
-	 		#{seq}
-	 	</foreach>
-</delete>
-
-<!-- 입력 -->
-<insert id="insertBoard">
-	<selectKey keyProperty="seq" resultType="java.lang.Integer" order="BEFORE">
-		SELECT ANSWERBOARD_SEQ.NEXTVAL SEQ FROM DUAL
-	</selectKey>
-	INSERT INTO ANSWERBOARD (SEQ, ID, TITLE, 
-      CONTENT, REF, STEP, 
-      DEPTH)
- 	 VALUES(#{seq}, #{id}, #{title},
-   		#{content}, (SELECT NVL(MAX(REF),0)+1 FROM ANSWERBOARD a ), 0, 
-   		0)
-</insert>
-
-<!-- 삭제 -->
-<delete id="deleteBoard">
-	DELETE FROM ANSWERBOARD WHERE SEQ = #{seq}
-</delete>
 </mapper>
 
 

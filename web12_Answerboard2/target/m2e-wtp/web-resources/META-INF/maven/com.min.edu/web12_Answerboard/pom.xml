@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.min.edu</groupId>
+  <artifactId>web12_Answerboard</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>web12_Answerboard Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <!-- Maven을 통해서 Packaging할 때 JUnit을 하지 않도록 하는 설정-->
+  <!-- <properties>
+		<maven.test.skip>true</maven.test.skip>
+	</properties> -->
+  
+  <dependencies>
+    
+    <dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<version>23.26.0.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- myBatis 3.x persistence 객체-->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.19</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- logback 로그 처리 -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.4.14</version>
+			<scope>compile</scope>
+		</dependency>
+		
+	
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.4.14</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.17</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- lombok-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.42</version>
+			<scope>compile</scope>
+		</dependency>
+		<!--JSTL module jstl, jstl-api, servlet-api-->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- TDD(테스트 주도형 개발) junit test 4.x -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+    
+    
+    
+    
+  </dependencies>
+  <build>
+    <finalName>web12_Answerboard</finalName>
+    <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.14.1</version>
+				<configuration>
+					<source>21</source>
+					<target>21</target>
+				</configuration>
+			</plugin>
+		</plugins>
+  </build>
+</project>

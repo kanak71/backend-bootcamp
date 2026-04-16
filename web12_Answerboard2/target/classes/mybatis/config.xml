@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--myBatis의 환경설정 값이 되는 Tag를 작성하는 곳 -->
+	
+	<properties resource="properties/oracle.properties"/>
+	
+	<settings>
+	    <setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type ="com.min.edu.dto.AnswerboardDto" alias="AnswerboardDto"/>
+		<typeAlias type ="com.min.edu.dto.MemberDto" alias="MemberDto"/>
+
+	</typeAliases>
+
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${user}" />
+				<property name="password" value="${pw}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+<mappers>
+	<mapper resource="sql/Answerboard_Statement.xml" />
+	<mapper resource="sql/User_Statement.xml"/>
+</mappers>
+
+</configuration>

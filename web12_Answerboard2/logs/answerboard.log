@@ -1,0 +1,36 @@
+INFO  26-04-13 10:46:53[main] [AnswerboardDaoImpl:22] - selectAllBoard 전체조회
+INFO  26-04-13 10:48:38[main] [AnswerboardDaoImpl:22] - selectAllBoard 전체조회
+INFO  26-04-13 11:01:59[main] [AnswerboardDaoImpl:22] - selectAllBoard 전체조회
+INFO  26-04-13 11:02:00[main] [AnswerboardDaoImpl:29] - selectDetailBoard 상세조회 : 1
+INFO  26-04-13 11:04:38[main] [UserDaoImpl:18] - login 로그인 : null
+INFO  26-04-13 11:04:54[main] [UserDaoImpl:18] - login 로그인 : {password=1111, id=user03}
+INFO  26-04-13 11:09:27[main] [AnswerboardDaoImpl:67] - insertBoard 새글입력
+INFO  26-04-13 11:09:27[main] [AnswerboardDaoImpl:68] - 입력받은 DTO : com.min.edu.dto.AnswerboardDto@6a55299e
+INFO  26-04-13 11:10:00[main] [AnswerboardDaoImpl:67] - insertBoard 새글입력
+INFO  26-04-13 11:10:00[main] [AnswerboardDaoImpl:68] - 입력받은 DTO : com.min.edu.dto.AnswerboardDto@6a55299e
+INFO  26-04-13 11:10:53[main] [AnswerboardDaoImpl:67] - insertBoard 새글입력
+INFO  26-04-13 11:10:53[main] [AnswerboardDaoImpl:68] - 입력받은 DTO : com.min.edu.dto.AnswerboardDto@6a55299e
+INFO  26-04-13 11:10:54[main] [AnswerboardDaoImpl:71] - SQL문 후 DTO : com.min.edu.dto.AnswerboardDto@6a55299e
+INFO  26-04-13 11:12:36[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:16:47[main] [AnswerboardDaoImpl:36] - reply 답글 작성 Transaction 처리 : com.min.edu.dto.AnswerboardDto@16fdec90
+INFO  26-04-13 11:16:48[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:22:40[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [4, 5]
+INFO  26-04-13 11:22:40[main] [AnswerboardDaoImpl:36] - reply 답글 작성 Transaction 처리 : com.min.edu.dto.AnswerboardDto@2617f816
+INFO  26-04-13 11:22:41[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:22:58[main] [AnswerboardDaoImpl:36] - reply 답글 작성 Transaction 처리 : com.min.edu.dto.AnswerboardDto@16fdec90
+INFO  26-04-13 11:22:59[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:23:09[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [4, 5]
+INFO  26-04-13 11:23:10[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:24:49[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [4, 5]
+INFO  26-04-13 11:24:49[main] [AnswerboardDaoImpl:88] - 삭제된 row의 갯수 : 2
+INFO  26-04-13 11:24:49[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:27:43[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [1, 2]
+INFO  26-04-13 11:27:44[main] [AnswerboardDaoImpl:88] - 삭제된 row의 갯수 : 2
+INFO  26-04-13 11:27:44[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:29:04[main] [AnswerboardDaoImpl:77] - deleteBoard DB삭제 : 5
+INFO  26-04-13 11:29:05[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
+INFO  26-04-13 11:29:42[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [1, 2]
+INFO  26-04-13 11:29:43[main] [AnswerboardDaoImpl:88] - 삭제된 row의 갯수 : 2
+INFO  26-04-13 11:32:35[main] [AnswerboardDaoImpl:85] - multiDelete 다중삭제, 단일삭제 : [1, 2]
+INFO  26-04-13 11:32:35[main] [AnswerboardDaoImpl:88] - 삭제된 row의 갯수 : 2
+INFO  26-04-13 11:32:35[main] [AnswerboardDaoImpl:56] - modifyBoard 글수정 : {seq=4, content=수정 글 내용 작성 test}
