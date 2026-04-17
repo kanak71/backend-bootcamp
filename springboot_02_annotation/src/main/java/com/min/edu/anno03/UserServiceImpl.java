@@ -18,15 +18,26 @@ public class UserServiceImpl implements IUserService {
 	//멤버필드가 final로 선언되어 있다는 것은 "반드시 생성자를 통해서 입력"하겠다
 //	private final UserDto dto; 
 	
-	//2. 필드(멤버필드) 주입
+//	//2. 필드(멤버필드) 주입
+//	@Autowired
+//	@Qualifier("userDto")
+//	private UserDto userDto;
+	
+	//3. Setter 주입
+	private UserDto dtoSetter;
+	
 	@Autowired
 	@Qualifier("userDto")
-	private UserDto userDto;
+	public void setDtoSetter(UserDto dtoSetter) {
+		this.dtoSetter = dtoSetter;
+	}
+	
 	
 	@Override
 	public void addUser() {
 		
 
 	}
+
 
 }
