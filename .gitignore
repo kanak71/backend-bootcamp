@@ -1,0 +1,13 @@
+# Eclipse / Java
+.metadata/
+.settings/
+bin/
+target/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Browser / temp
+Network/
+Cookies/
